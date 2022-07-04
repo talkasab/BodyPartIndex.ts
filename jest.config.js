@@ -3,6 +3,7 @@ module.exports = {
         'src/**/*.{ts,tsx}',
     ],
     'moduleDirectories': [
+        '<rootDir>',
         './node_modules',
         './src',
     ],

@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "baseUrl": "./src",
+        "baseUrl": ".",
         "outDir": "./dist",
         "sourceMap": true,
         "module": "commonjs",
@@ -22,7 +22,11 @@
         "strictFunctionTypes": true,
         "alwaysStrict": true,
         "noImplicitThis": true,
-        "noImplicitAny": true
+        "noImplicitAny": true,
+		"resolveJsonModule": true,
+		"paths": {
+			"*": ["*"]
+		},
     },
     "include": [
         "src/**/*"
