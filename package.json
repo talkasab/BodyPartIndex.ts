@@ -6,7 +6,8 @@
   "types": "dist/index.d.ts",
   "license": "ISC",
   "scripts": {
-    "build": "cross-env LIB_VERSION=$npm_package_version NODE_ENV=production webpack --mode production",
+    "build": "cross-env LIB_VERSION=$npm_package_version NODE_ENV=production webpack --mode production && npm run types",
+    "types": "dts-bundle-generator -o dist/index.d.ts src/declarations/index.ts",
     "verify:typescript": "tsc --noEmit",
     "verify:eslint": "eslint src --ext .tsx --ext .ts",
     "verify": "npm run verify:typescript && npm run verify:eslint",
@@ -19,6 +20,7 @@
     "@typescript-eslint/eslint-plugin": "^5.30.4",
     "@typescript-eslint/parser": "^5.30.4",
     "cross-env": "^7.0.3",
+    "dts-bundle-generator": "^6.12.0",
     "eslint": "^8.19.0",
     "eslint-plugin-jsdoc": "^39.3.3",
     "jest": "^28.1.2",
