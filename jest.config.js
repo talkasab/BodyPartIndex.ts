@@ -1,6 +1,7 @@
 module.exports = {
     'collectCoverageFrom': [
         'src/**/*.{ts,tsx}',
+        '!src/declarations/**'
     ],
     'moduleDirectories': [
         '<rootDir>',
