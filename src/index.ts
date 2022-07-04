@@ -1,16 +1,14 @@
-import { Dev } from 'src/build/dev';
+import { IBodyPartsFile } from 'src/interfaces/bodyParts/IBodyPartsFile';
 
-const json = require('body_parts.json');
+const { bodyParts } = require('body_parts.json') as IBodyPartsFile;
 
 class Index {
 
     /**
-     * Returns result.
+     * Returns body parts length.
      */
-    public static getResult (): string {
-        // eslint-disable-next-line no-console
-        console.log(json);
-        return Dev.getDev();
+    public static getBodyPartsLength (): number {
+        return bodyParts.length;
     }
 
 }

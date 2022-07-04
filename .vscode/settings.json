@@ -5,5 +5,6 @@
     "editor.insertSpaces": false,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
-    }
+    },
+	"files.eol": "\r\n",
 }
