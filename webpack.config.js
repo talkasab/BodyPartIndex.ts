@@ -63,14 +63,6 @@ module.exports = {
         })
     ],
     mode: 'development',
-    devServer: {
-        headers: {
-            'Access-Control-Allow-Origin': '*'
-        },
-        compress: true,
-        port: 9001,
-        historyApiFallback: true,
-    },
     optimization: {
         minimizer: [
             new TerserPlugin({

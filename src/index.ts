@@ -1,5 +1,6 @@
 import { Dev } from 'src/build/dev';
-import json from 'body_parts.json';
+
+const json = require('body_parts.json');
 
 class Index {
 

@@ -13,6 +13,6 @@ module.exports = {
         'jsdoc'
     ],
     'rules': {
-        'camelcase': 0
+        '@typescript-eslint/no-var-requires': 0,
     }
 };
