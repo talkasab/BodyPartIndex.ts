@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const Webpack = require('webpack');
 const Path = require('path');
@@ -60,9 +61,19 @@ module.exports = {
         new Webpack.DefinePlugin({
             __ENV__: JSON.stringify(getEnvironment()),
             __VERSION__: JSON.stringify(process.env.LIB_VERSION)
-        })
+        }),
+		new HtmlWebpackPlugin({
+			template: 'public/index.html',
+		})
     ],
     mode: 'development',
+	devServer: {
+        allowedHosts: 'all',
+        compress: true,
+        port: 9001,
+        hot: true,
+        historyApiFallback: true,
+    },
     optimization: {
         minimizer: [
             new TerserPlugin({
