@@ -1,38 +1,41 @@
-import { IBodyPartsFile } from 'src/interfaces/bodyParts/IBodyPartsFile';
-
-const { bodyParts } = require('body_parts.json') as IBodyPartsFile;
+import { BodyPartsData } from 'src/bodyParts/data/bodyPartsData';
+import { configuration } from './configuration';
 
 class Index {
 
     /**
-     * Returns body parts length.
-     */
-    public static getBodyPartsLength (): number {
-        return bodyParts.length;
+	 * Initializes the index.
+	 */
+    public constructor() {
+        BodyPartsData.init(configuration.file);
     }
 
     /**
 	 *
 	 * @param id
 	 */
-    public static get (id: string): void {
-        const containedByIds: { [key: string]: string } = {};
-        const partOfIds: { [key: string]: string } = {};
+    public get (id: string): void {
+        let lastContainedBy = BodyPartsData.containedByIds[id];
+        const containedByIdsAll: { [key: string]: boolean } = {};
+        while (lastContainedBy && !containedByIdsAll[lastContainedBy]) {
+            containedByIdsAll[lastContainedBy] = true;
+            lastContainedBy = BodyPartsData.containedByIds[lastContainedBy];
+        }
+		
+        console.log(containedByIdsAll);
+    }
 
-        bodyParts.forEach(item => {
-            containedByIds[item.radlexId] = item.containedById;
-            if (item.partOfId) {
-                partOfIds[item.radlexId] = item.partOfId;
-            }
-        });
-
-        containedByIds[id];
-        console.log(containedByIds[id]);
+    /**
+     * Returns the version of the library.
+     */
+    public getVersion (): string {
+        return configuration.version;
     }
 
 }
 
-Index.get('RID56');
+const index = new Index();
+index.get('RID56');
 
 export {
     Index

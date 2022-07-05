@@ -8,7 +8,7 @@
   "scripts": {
 	"dev": "webpack serve",
     "build": "cross-env LIB_VERSION=$npm_package_version NODE_ENV=production webpack --mode production && npm run types",
-    "types": "dts-bundle-generator -o dist/index.d.ts src/declarations/index.ts",
+    "types": "dts-bundle-generator -o dist/index.d.ts src/declarations/extend.d.ts",
     "verify:typescript": "tsc --noEmit",
     "verify:eslint": "eslint src --ext .tsx --ext .ts",
     "verify": "npm run verify:typescript && npm run verify:eslint",

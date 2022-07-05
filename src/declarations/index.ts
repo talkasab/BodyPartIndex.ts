@@ -1,1 +1,0 @@
-export { Index } from 'src';
