@@ -3,11 +3,12 @@ import { IBodyPartsFile } from 'src/interfaces/bodyParts/IBodyPartsFile';
 
 type AncestorsMap = { [key: string]: string };
 type ChildrenMap = { [key: string]: string[] };
+type BodyPartsMap = { [ key: string]: IBodyPart };
 
 class BodyPartsData {
 
     public static version: string;
-    public static bodyParts: IBodyPart[];
+    public static bodyPartsMap: BodyPartsMap;
     public static containedAncestors: AncestorsMap;
     public static containedChildren: ChildrenMap;
     public static partOfAncestors: AncestorsMap;
@@ -22,14 +23,16 @@ class BodyPartsData {
         const containedChildren: ChildrenMap = {};
         const partOfAncestors: AncestorsMap = {};
         const partOfChildren: ChildrenMap = {};
+        const bodyPartsMap: BodyPartsMap = {};
 
         file.bodyParts.forEach(item => {
+            bodyPartsMap[item.radlexId] = item;
             this.initContained(containedAncestors, containedChildren, item);
             this.initPartOf(partOfAncestors, partOfChildren, item);
         });
 
         this.version = file.$version;
-        this.bodyParts = file.bodyParts;
+        this.bodyPartsMap = bodyPartsMap;
         this.containedAncestors = containedAncestors;
         this.containedChildren = containedChildren;
         this.partOfAncestors = partOfAncestors;

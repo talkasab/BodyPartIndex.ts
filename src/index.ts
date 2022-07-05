@@ -1,5 +1,6 @@
-import { BodyPartsData } from 'src/bodyParts/data/bodyPartsData';
-import { configuration } from './configuration';
+import { BodyPartsData } from 'src/bodyParts/data';
+import { BodyPart } from 'src/bodyParts/bodyPart';
+import { configuration } from 'src/configuration';
 
 class Index {
 
@@ -11,33 +12,17 @@ class Index {
     }
 
     /**
-	 * Returns the parents.
-	 * @param {string} id - The id.
+	 * Returns a BodyPart object by radlexId.
+	 * @param {string} radlexId - The radlexId.
 	 */
-    public getParents (id: string): void {
-        let last = BodyPartsData.containedAncestors[id];
-        const containedParents: { [key: string]: boolean } = {};
-        while (last && !containedParents[last]) {
-            containedParents[last] = true;
-            last = BodyPartsData.containedAncestors[last];
-        }
-		
-        console.log(containedParents);
-    }
+    public getById (radlexId: string): BodyPart | null {
+        const data = BodyPartsData.bodyPartsMap[radlexId];
 
-    /**
-	 * Returns the children.
-	 * @param {string} id - The id.
-	 */
-	 public getChildren (id: string): void {
-        let last = BodyPartsData.containedAncestors[id];
-        const containedParents: { [key: string]: boolean } = {};
-        while (last && !containedParents[last]) {
-            containedParents[last] = true;
-            last = BodyPartsData.containedAncestors[last];
+        if (!data) {
+            return null;
         }
-		
-        console.log(containedParents);
+
+        return new BodyPart(data);
     }
 
     /**
@@ -50,7 +35,8 @@ class Index {
 }
 
 const index = new Index();
-index.getParents('RID56');
+const a = index.getById('RID56');
+console.log(a?.getImmediateContainedChildren());
 
 export {
     Index
