@@ -6,23 +6,38 @@ class Index {
     /**
 	 * Initializes the index.
 	 */
-    public constructor() {
+    public constructor () {
         BodyPartsData.init(configuration.file);
     }
 
     /**
-	 *
-	 * @param id
+	 * Returns the parents.
+	 * @param {string} id - The id.
 	 */
-    public get (id: string): void {
-        let lastContainedBy = BodyPartsData.containedByIds[id];
-        const containedByIdsAll: { [key: string]: boolean } = {};
-        while (lastContainedBy && !containedByIdsAll[lastContainedBy]) {
-            containedByIdsAll[lastContainedBy] = true;
-            lastContainedBy = BodyPartsData.containedByIds[lastContainedBy];
+    public getParents (id: string): void {
+        let last = BodyPartsData.containedAncestors[id];
+        const containedParents: { [key: string]: boolean } = {};
+        while (last && !containedParents[last]) {
+            containedParents[last] = true;
+            last = BodyPartsData.containedAncestors[last];
         }
 		
-        console.log(containedByIdsAll);
+        console.log(containedParents);
+    }
+
+    /**
+	 * Returns the children.
+	 * @param {string} id - The id.
+	 */
+	 public getChildren (id: string): void {
+        let last = BodyPartsData.containedAncestors[id];
+        const containedParents: { [key: string]: boolean } = {};
+        while (last && !containedParents[last]) {
+            containedParents[last] = true;
+            last = BodyPartsData.containedAncestors[last];
+        }
+		
+        console.log(containedParents);
     }
 
     /**
@@ -35,7 +50,7 @@ class Index {
 }
 
 const index = new Index();
-index.get('RID56');
+index.getParents('RID56');
 
 export {
     Index

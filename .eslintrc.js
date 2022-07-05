@@ -1,7 +1,7 @@
 module.exports = {
     'extends': [
         'plugin:@typescript-eslint/recommended',
-        '@jasson2788/eslint-config-typescript'
+        '@tim.mouskhelichvili/eslint-config-typescript'
     ],
     'parser': '@typescript-eslint/parser',
     'parserOptions': {
@@ -11,9 +11,5 @@ module.exports = {
     'plugins': [
         '@typescript-eslint',
         'jsdoc'
-    ],
-    'rules': {
-        '@typescript-eslint/no-var-requires': 0,
-        'linebreak-style': [ 'error', 'unix' ]
-    }
+    ]
 };

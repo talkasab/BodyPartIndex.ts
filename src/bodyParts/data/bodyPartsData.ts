@@ -1,38 +1,79 @@
 import { IBodyPart } from 'src/interfaces/bodyParts/IBodyPart';
 import { IBodyPartsFile } from 'src/interfaces/bodyParts/IBodyPartsFile';
 
-interface IRadlexIdMap {
-	[key: string]: string
-}
+type AncestorsMap = { [key: string]: string };
+type ChildrenMap = { [key: string]: string[] };
 
 class BodyPartsData {
 
     public static version: string;
     public static bodyParts: IBodyPart[];
-    public static containedByIds: IRadlexIdMap;
-    public static partOfIds: IRadlexIdMap;
+    public static containedAncestors: AncestorsMap;
+    public static containedChildren: ChildrenMap;
+    public static partOfAncestors: AncestorsMap;
+    public static partOfChildren: ChildrenMap;
 
     /**
-     * Initializes the BodyPartsData.
+     * Initializes the BodyPartsData class.
      * @param {IBodyPartsFile} file - The file.
      */
-    public static init(file: IBodyPartsFile): void {
-        const containedByIds: IRadlexIdMap = {};
-        const partOfIds: IRadlexIdMap = {};
+    public static init (file: IBodyPartsFile): void {
+        const containedAncestors: AncestorsMap = {};
+        const containedChildren: ChildrenMap = {};
+        const partOfAncestors: AncestorsMap = {};
+        const partOfChildren: ChildrenMap = {};
 
         file.bodyParts.forEach(item => {
-            containedByIds[item.radlexId] = item.containedById;
-            if (item.partOfId) {
-                partOfIds[item.radlexId] = item.partOfId;
-            }
+            this.initContained(containedAncestors, containedChildren, item);
+            this.initPartOf(partOfAncestors, partOfChildren, item);
         });
 
         this.version = file.$version;
         this.bodyParts = file.bodyParts;
-        this.containedByIds = containedByIds;
-        this.partOfIds = partOfIds;
+        this.containedAncestors = containedAncestors;
+        this.containedChildren = containedChildren;
+        this.partOfAncestors = partOfAncestors;
+        this.partOfChildren = partOfChildren;
     }
 
+    /**
+	 * Initializes the contained hierarchy.
+	 * @param {AncestorsMap} containedAncestors - The contained ancestors.
+	 * @param {ChildrenMap} containedChildren - The contained children. 
+	 * @param {IBodyPart} item - The item.
+	 */
+    private static initContained (containedAncestors: AncestorsMap, containedChildren: ChildrenMap, item: IBodyPart): void {
+        containedAncestors[item.radlexId] = item.containedById;
+			
+        if (!containedChildren[item.containedById]) {
+            containedChildren[item.containedById] = [];
+        }
+
+        if (item.containedById !== item.radlexId) {
+            containedChildren[item.containedById].push(item.radlexId);
+        }
+    }
+
+    /**
+	 * Initializes the partOf hierarchy.
+	 * @param {AncestorsMap} partOfAncestors - The partOf ancestors.
+	 * @param {ChildrenMap} partOfChildren - The partOf children. 
+	 * @param {IBodyPart} item - The item.
+	 */
+	 private static initPartOf (partOfAncestors: AncestorsMap, partOfChildren: ChildrenMap, item: IBodyPart): void {
+        if (!item.partOfId) return;
+
+        partOfAncestors[item.radlexId] = item.partOfId;
+			
+        if (!partOfChildren[item.partOfId]) {
+            partOfChildren[item.partOfId] = [];
+        }
+
+        if (item.partOfId !== item.radlexId) {
+            partOfChildren[item.partOfId].push(item.radlexId);
+        }
+    }
+	
 }
 
 export {
