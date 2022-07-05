@@ -6,11 +6,11 @@ module.exports = {
     'moduleDirectories': [
         '<rootDir>',
         './node_modules',
-        './src',
+        './src'
     ],
     'moduleNameMapper': {
         '^lodash-es$': 'lodash',
-        'src/(.*)': '<rootDir>/src/$1',
+        'src/(.*)': '<rootDir>/src/$1'
     },
     'reporters': [ 
         'default', 
@@ -19,6 +19,9 @@ module.exports = {
                 'outputDirectory': 'junit'
             } 
         ]
+    ],
+    'setupFiles': [
+        '<rootDir>/src/configs/testGlobals.ts'
     ],
     'testEnvironment': 'jsdom',
     'testMatch': [ '**/src/**/*test.(ts|tsx)' ],
