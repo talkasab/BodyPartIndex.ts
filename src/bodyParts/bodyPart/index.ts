@@ -2,7 +2,7 @@ import { IBodyPart } from 'src/interfaces/bodyParts/IBodyPart';
 import { BodyPartsMap, BodyPartsUtils } from 'src/bodyParts/utils';
 import { BodyPartsData } from 'src/bodyParts/data';
 
-class BodyPart {
+export class BodyPart {
 
     /**
 	 * Initializes the BodyPart.
@@ -13,7 +13,7 @@ class BodyPart {
     ) { }
 
     /**
-	 * Returns the data.
+	 * Returns the body part data.
 	 */
     public getData (): IBodyPart {
         return this.data;
@@ -28,9 +28,9 @@ class BodyPart {
 
     /**
 	 * Returns the children.
-	 * @param {number} maxLevel - The maxLevel (if specified will return children up to that level).
+	 * @param {number} depth - The depth (if specified will return children up to that level).
 	 */
-	 public getAllContainedChildren (maxLevel = -1): BodyPart[] {
+	 public getAllContainedChildren (depth = -1): BodyPart[] {
         const immediateChildren = BodyPartsData.containedChildren[this.data.radlexId];
         const map: BodyPartsMap = {};
 		
@@ -41,7 +41,7 @@ class BodyPart {
                 map[child] = true;
             });
 
-            if (maxLevel !== -1 && current >= maxLevel) {
+            if (depth !== -1 && current >= depth) {
                 return;
             }
 			
@@ -90,7 +90,3 @@ class BodyPart {
     }
 
 }
-
-export {
-    BodyPart
-};

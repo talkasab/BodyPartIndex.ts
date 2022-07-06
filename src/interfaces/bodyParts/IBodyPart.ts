@@ -1,6 +1,6 @@
 import { ICode } from 'src/interfaces/bodyParts/ICode';
 
-interface IBodyPart {
+export interface IBodyPart {
 	radlexId: string;
 	description: string;
 	containedById: string;
@@ -12,7 +12,3 @@ interface IBodyPart {
 	unsidedId?: string;
 	sexSpecific?: 'Male' | 'Female';
 }
-
-export {
-    IBodyPart
-};

@@ -1,8 +1,4 @@
-interface ICode {
+export interface ICode {
 	system: string;
 	code: string;
 }
-
-export {
-    ICode
-};

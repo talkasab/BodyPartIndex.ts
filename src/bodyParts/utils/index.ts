@@ -1,9 +1,9 @@
 import { BodyPartsData } from 'src/bodyParts/data';
 import { BodyPart } from 'src/bodyParts/bodyPart';
 
-type BodyPartsMap = { [key: string]: boolean };
+export type BodyPartsMap = { [key: string]: boolean };
 
-class BodyPartsUtils {
+export class BodyPartsUtils {
 
     /**
 	 * Transform a map to an array of body parts.
@@ -24,8 +24,3 @@ class BodyPartsUtils {
     }
 
 }
-
-export {
-    BodyPartsUtils,
-    BodyPartsMap
-};

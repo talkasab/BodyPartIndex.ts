@@ -1,7 +1,7 @@
-import { Index } from 'src';
+import { AnatomicLocationLibrary } from 'src';
 
-describe('Index', () => {
+describe('AnatomicLocationLibrary', () => {
     it('returns the correct version', () => {
-        expect(new Index().getVersion()).toBe('testVersion');
+        expect(new AnatomicLocationLibrary().getVersion()).toBe('testVersion');
     });
 });

@@ -1,6 +1,16 @@
-import { Index } from 'src';
+import { AnatomicLocationLibrary } from 'src';
+export { BodyPart } from 'src/bodyParts/bodyPart';
 
 declare global {
+
+	interface Window {
+
+		/**
+		 * The anatomic location library.
+		 */
+		AnatomicLocationLibrary: AnatomicLocationLibrary;
+
+	}
 
 	/**
 	 * The version.
@@ -8,7 +18,3 @@ declare global {
 	const __VERSION__: string;
 
 }
-
-export {
-    Index
-};

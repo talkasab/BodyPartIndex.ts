@@ -5,7 +5,7 @@ type AncestorsMap = { [key: string]: string };
 type ChildrenMap = { [key: string]: string[] };
 type BodyPartsMap = { [ key: string]: IBodyPart };
 
-class BodyPartsData {
+export class BodyPartsData {
 
     public static version: string;
     public static bodyPartsMap: BodyPartsMap;
@@ -78,7 +78,3 @@ class BodyPartsData {
     }
 	
 }
-
-export {
-    BodyPartsData
-};
