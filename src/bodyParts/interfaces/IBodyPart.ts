@@ -1,4 +1,4 @@
-import { ICode } from 'src/interfaces/bodyParts/ICode';
+import { ICode } from 'src/bodyParts/interfaces/ICode';
 
 export interface IBodyPart {
 	radlexId: string;

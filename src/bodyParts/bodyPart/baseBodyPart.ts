@@ -1,6 +1,6 @@
-import { IBodyPart } from 'src/interfaces/bodyParts/IBodyPart';
+import { IBodyPart } from 'src/bodyParts/interfaces/IBodyPart';
+import { getBodyPartById } from 'src/bodyParts/utils/bodyPart';
 import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
-import { getBodyPartById } from 'src/bodyParts/utils';
 
 export abstract class BaseBodyPart {
 

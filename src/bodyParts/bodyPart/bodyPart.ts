@@ -1,6 +1,6 @@
-import { BodyPartsMap, transformMapToBodyParts } from 'src/bodyParts/utils';
+import { BodyPartsMap, transformMapToBodyParts } from 'src/bodyParts/utils/bodyPart';
 import { BaseBodyPart } from 'src/bodyParts/bodyPart/baseBodyPart';
-import { BodyPartsData } from 'src/bodyParts/data';
+import { BODY_PARTS } from 'src/bodyParts';
 
 export class BodyPart extends BaseBodyPart {
 
@@ -16,7 +16,7 @@ export class BodyPart extends BaseBodyPart {
 	 * @param {number} depth - The depth (if specified will return children up to that level).
 	 */
 	 public getAllContainedChildren (depth = -1): BodyPart[] {
-        const immediateChildren = BodyPartsData.containedChildren[this.data.radlexId];
+        const immediateChildren = BODY_PARTS.containedChildren[this.data.radlexId];
         const map: BodyPartsMap = {};
 		
         if (!immediateChildren) return [];
@@ -31,7 +31,7 @@ export class BodyPart extends BaseBodyPart {
             }
 			
             children.forEach(child => {
-                const nextChildren = BodyPartsData.containedChildren[child];
+                const nextChildren = BODY_PARTS.containedChildren[child];
                 if (nextChildren) {
                     traverse(nextChildren, current + 1);
                 }
@@ -47,12 +47,12 @@ export class BodyPart extends BaseBodyPart {
 	 * Returns all the contained ancestors.
 	 */
     public getAllContainedAncestors (): BodyPart[] {
-        let last = BodyPartsData.containedAncestors[this.data.radlexId];
+        let last = BODY_PARTS.containedAncestors[this.data.radlexId];
         const map: BodyPartsMap = {};
 
         while (last && !map[last]) {
             map[last] = true;
-            last = BodyPartsData.containedAncestors[last];
+            last = BODY_PARTS.containedAncestors[last];
         }
 
         return transformMapToBodyParts(map);

@@ -1,5 +1,5 @@
 import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
-import { BodyPartsData } from 'src/bodyParts/data';
+import { BODY_PARTS } from 'src/bodyParts';
 
 export type BodyPartsMap = { [key: string]: boolean };
 
@@ -11,7 +11,7 @@ export const transformMapToBodyParts = (map: BodyPartsMap): BodyPart[] => {
     const arr = [];
 	
     for (const i in map) {
-        const data = BodyPartsData.bodyPartsMap[i];
+        const data = BODY_PARTS.bodyPartsMap[i];
         if (data) {
             const bodyPart = new BodyPart(data);
             arr.push(bodyPart);
@@ -30,7 +30,7 @@ export const getBodyPartById = (id: string | null): BodyPart | null => {
         return null;
     }
 
-    const data = BodyPartsData.bodyPartsMap[id];
+    const data = BODY_PARTS.bodyPartsMap[id];
 
     if (!data) {
         return null;

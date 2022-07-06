@@ -1,5 +1,5 @@
 import { AnatomicLocationLibrary } from 'src';
-export { BodyPart } from 'src/bodyParts/bodyPart';
+export { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
 
 declare global {
 

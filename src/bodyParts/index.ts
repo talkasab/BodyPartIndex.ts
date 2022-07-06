@@ -1,6 +1,9 @@
 import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
-import { BodyPartsData } from 'src/bodyParts/data';
 import { configuration } from 'src/configuration';
+import { IBodyPartsResponse } from './interfaces/IBodyPartsResponse';
+import { getBodyParts } from './utils/data';
+
+export let BODY_PARTS: IBodyPartsResponse;
 
 export class BodyPartIndex {
 
@@ -8,7 +11,7 @@ export class BodyPartIndex {
 	 * Initializes the BodyPartIndex.
 	 */
     public constructor () {
-        BodyPartsData.init(configuration.file);
+        BODY_PARTS = getBodyParts(configuration.file);
     }
 
     /**
@@ -16,7 +19,7 @@ export class BodyPartIndex {
 	 * @param {string} radlexId - The radlexId.
 	 */
     public getById (radlexId: string): BodyPart | null {
-        const data = BodyPartsData.bodyPartsMap[radlexId];
+        const data = BODY_PARTS.bodyPartsMap[radlexId];
 
         if (!data) {
             return null;
@@ -36,8 +39,8 @@ export class BodyPartIndex {
             return [];
         }
         
-        for (const key in BodyPartsData.bodyPartsMap) {
-            const data = BodyPartsData.bodyPartsMap[key];
+        for (const key in BODY_PARTS.bodyPartsMap) {
+            const data = BODY_PARTS.bodyPartsMap[key];
             const bodyPartTerms = [
                 data.description,
                 ...data.synonyms || []
@@ -56,4 +59,5 @@ export class BodyPartIndex {
 
 const index = new BodyPartIndex();
 const a = index.search('cuneiform');
+// eslint-disable-next-line no-console
 console.log(a);
