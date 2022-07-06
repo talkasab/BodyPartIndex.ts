@@ -19,7 +19,9 @@ export class BodyPart extends BaseBodyPart {
         const immediateChildren = BODY_PARTS.containedChildren[this.data.radlexId];
         const map: BodyPartsMap = {};
 		
-        if (!immediateChildren) return [];
+        if (!immediateChildren) {
+            return [];
+        }
 
         const traverse = (children: string[], current: number): void => {
             children.forEach(child => {

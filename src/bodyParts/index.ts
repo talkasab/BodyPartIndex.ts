@@ -1,7 +1,7 @@
+import { IBodyPartsResponse } from 'src/bodyParts/interfaces/IBodyPartsResponse';
 import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
+import { getBodyParts } from 'src/bodyParts/utils/data';
 import { configuration } from 'src/configuration';
-import { IBodyPartsResponse } from './interfaces/IBodyPartsResponse';
-import { getBodyParts } from './utils/data';
 
 export let BODY_PARTS: IBodyPartsResponse;
 
@@ -56,8 +56,3 @@ export class BodyPartIndex {
     }
 
 }
-
-const index = new BodyPartIndex();
-const a = index.search('cuneiform');
-// eslint-disable-next-line no-console
-console.log(a);
