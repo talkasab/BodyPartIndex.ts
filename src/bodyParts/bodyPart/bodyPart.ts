@@ -1,23 +1,8 @@
-import { IBodyPart } from 'src/interfaces/bodyParts/IBodyPart';
-import { BodyPartsMap, BodyPartsUtils } from 'src/bodyParts/utils';
+import { BodyPartsMap, transformMapToBodyParts } from 'src/bodyParts/utils';
+import { BaseBodyPart } from 'src/bodyParts/bodyPart/baseBodyPart';
 import { BodyPartsData } from 'src/bodyParts/data';
 
-export class BodyPart {
-
-    /**
-	 * Initializes the BodyPart.
-	 * @param {IBodyPart} data - The data.
-	 */
-    public constructor (
-		private data: IBodyPart
-    ) { }
-
-    /**
-	 * Returns the body part data.
-	 */
-    public getData (): IBodyPart {
-        return this.data;
-    }
+export class BodyPart extends BaseBodyPart {
 
     /**
 	 * Returns the immediate contained children.
@@ -55,7 +40,7 @@ export class BodyPart {
 
         traverse(immediateChildren, 1);
 
-        return BodyPartsUtils.transformMap(map);
+        return transformMapToBodyParts(map);
     }
 
     /**
@@ -70,7 +55,7 @@ export class BodyPart {
             last = BodyPartsData.containedAncestors[last];
         }
 
-        return BodyPartsUtils.transformMap(map);
+        return transformMapToBodyParts(map);
     }
 
     /**

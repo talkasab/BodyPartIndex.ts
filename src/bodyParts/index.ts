@@ -1,5 +1,5 @@
+import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
 import { BodyPartsData } from 'src/bodyParts/data';
-import { BodyPart } from 'src/bodyParts/bodyPart';
 import { configuration } from 'src/configuration';
 
 export class BodyPartIndex {
