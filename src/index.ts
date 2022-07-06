@@ -1,5 +1,5 @@
-export { BodyPart } from 'src/bodyParts/bodyPart';
 import { configuration } from 'src/configuration';
+export { BodyPartIndex } from 'src/bodyParts';
 
 export class AnatomicLocationLibrary {
 
