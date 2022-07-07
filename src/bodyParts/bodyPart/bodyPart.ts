@@ -111,6 +111,10 @@ export class BodyPart extends BaseBodyPart {
             last = ancestors[last];
         }
 
+        if (map[this.data.radlexId]) {
+            delete map[this.data.radlexId];
+        }
+
         return transformMapToBodyParts(map);
     }
 
