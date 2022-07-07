@@ -1,3 +1,4 @@
+import { ChildrenMap, AncestorsMap } from 'src/bodyParts/interfaces/IBodyPartsResponse';
 import { BodyPartsMap, transformMapToBodyParts } from 'src/bodyParts/utils/bodyPart';
 import { BaseBodyPart } from 'src/bodyParts/bodyPart/baseBodyPart';
 import { BODY_PARTS } from 'src/bodyParts';
@@ -8,23 +9,46 @@ export class BodyPart extends BaseBodyPart {
 	 * Returns the immediate contained children.
 	 */
     public getImmediateContainedChildren (): BodyPart[] {
-        return this.getAllContainedChildren(1);
+        return this.getChildren(BODY_PARTS.containedChildren, 1);
+    }
+
+    /**
+	 * Returns all the contained children.
+	 */
+    public getAllContainedChildren (): BodyPart[] {
+        return this.getChildren(BODY_PARTS.containedChildren);
+    }
+
+    /**
+	 * Returns all the contained ancestors.
+	 */
+    public getAllContainedAncestors (): BodyPart[] {
+        return this.getAllAncestors(BODY_PARTS.containedAncestors);
+    }
+
+    /**
+	 * Returns if the bodyPart is a contained descendant of a parent.
+	 * @param {string} parentRadlexId - The parent radlex id.
+	 */
+    public isContained (parentRadlexId: string): boolean {
+        return this.isDescendant(parentRadlexId, this.getAllContainedAncestors());
     }
 
     /**
 	 * Returns the children.
+	 * @param {ChildrenMap} children - The children.
 	 * @param {number} depth - The depth (if specified will return children up to that level).
 	 */
-    public getAllContainedChildren (depth = -1): BodyPart[] {
-        const immediateChildren = BODY_PARTS.containedChildren[this.data.radlexId];
+    private getChildren (children: ChildrenMap, depth = -1): BodyPart[] {
+        const immediateChildren = children[this.data.radlexId];
         const map: BodyPartsMap = {};
 		
         if (!immediateChildren) {
             return [];
         }
 
-        const traverse = (children: string[], current: number): void => {
-            children.forEach(child => {
+        const traverse = (row: string[], current: number): void => {
+            row.forEach(child => {
                 map[child] = true;
             });
 
@@ -32,8 +56,8 @@ export class BodyPart extends BaseBodyPart {
                 return;
             }
 			
-            children.forEach(child => {
-                const nextChildren = BODY_PARTS.containedChildren[child];
+            row.forEach(child => {
+                const nextChildren = children[child];
                 if (nextChildren) {
                     traverse(nextChildren, current + 1);
                 }
@@ -47,14 +71,15 @@ export class BodyPart extends BaseBodyPart {
 
     /**
 	 * Returns all the contained ancestors.
+	 * @param {AncestorsMap} ancestors - The ancestors.
 	 */
-    public getAllContainedAncestors (): BodyPart[] {
-        let last = BODY_PARTS.containedAncestors[this.data.radlexId];
+    private getAllAncestors (ancestors: AncestorsMap): BodyPart[] {
+        let last = ancestors[this.data.radlexId];
         const map: BodyPartsMap = {};
 
         while (last && !map[last]) {
             map[last] = true;
-            last = BODY_PARTS.containedAncestors[last];
+            last = ancestors[last];
         }
 
         return transformMapToBodyParts(map);
@@ -63,12 +88,11 @@ export class BodyPart extends BaseBodyPart {
     /**
 	 * Returns if the bodyPart is a descendant of a parent.
 	 * @param {string} parentRadlexId - The parent radlex id.
+	 * @param {BodyPart[]} ancestors - The ancestors.
 	 */
-    public isContained (parentRadlexId: string): boolean {
-        const allAncestors = this.getAllContainedAncestors();
-        
-        for (let i = 0; i < allAncestors.length; i++) {
-            if (allAncestors[i].getData().radlexId === parentRadlexId) {
+    private isDescendant (parentRadlexId: string, ancestors: BodyPart[]): boolean {      
+        for (let i = 0; i < ancestors.length; i++) {
+            if (ancestors[i].getData().radlexId === parentRadlexId) {
                 return true;
             }
         }
