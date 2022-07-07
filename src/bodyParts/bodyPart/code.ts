@@ -1,6 +1,6 @@
 import { ICode } from 'src/bodyParts/interfaces/ICode';
 
-class Code {
+export class Code {
 
     /**
 	 * The code constructor initialization.
@@ -25,7 +25,3 @@ class Code {
     }
 
 }
-
-export {
-    Code
-};
