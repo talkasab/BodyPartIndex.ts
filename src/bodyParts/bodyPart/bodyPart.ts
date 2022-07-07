@@ -35,6 +35,35 @@ export class BodyPart extends BaseBodyPart {
     }
 
     /**
+	 * Returns the immediate partOf children.
+	 */
+    public getImmediatePartOfChildren (): BodyPart[] {
+        return this.getChildren(BODY_PARTS.partOfChildren, 1);
+    }
+
+    /**
+	 * Returns all the partOf children.
+	 */
+    public getAllPartOfChildren (): BodyPart[] {
+        return this.getChildren(BODY_PARTS.partOfChildren);
+    }
+
+    /**
+	 * Returns all the parOf ancestors.
+	 */
+    public getAllPartOfAncestors (): BodyPart[] {
+        return this.getAllAncestors(BODY_PARTS.partOfAncestors);
+    }
+
+    /**
+	 * Returns if the bodyPart is a parOf descendant of a parent.
+	 * @param {string} parentRadlexId - The parent radlex id.
+	 */
+    public isPartOf (parentRadlexId: string): boolean {
+        return this.isDescendant(parentRadlexId, this.getAllPartOfAncestors());
+    }
+
+    /**
 	 * Returns the children.
 	 * @param {ChildrenMap} children - The children.
 	 * @param {number} depth - The depth (if specified will return children up to that level).
@@ -70,7 +99,7 @@ export class BodyPart extends BaseBodyPart {
     }
 
     /**
-	 * Returns all the contained ancestors.
+	 * Returns all the ancestors.
 	 * @param {AncestorsMap} ancestors - The ancestors.
 	 */
     private getAllAncestors (ancestors: AncestorsMap): BodyPart[] {
