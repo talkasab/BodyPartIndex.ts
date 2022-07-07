@@ -1,5 +1,7 @@
 import { AnatomicLocationLibrary } from 'src';
+export { BodyPartIndex } from 'src/bodyParts/index';
 export { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
+export { AnatomicLocationLibrary };
 
 declare global {
 
@@ -13,7 +15,7 @@ declare global {
 	}
 
 	/**
-	 * The version.
+	 * The library version.
 	 */
 	const __VERSION__: string;
 

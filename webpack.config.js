@@ -20,6 +20,26 @@ const getEnvironment = () => {
 };
 
 /**
+ * Returns the plugins.
+ */
+const getPlugins = () => {
+	const plugins = [
+		new Webpack.DefinePlugin({
+            __ENV__: JSON.stringify(getEnvironment()),
+            __VERSION__: JSON.stringify(process.env.LIB_VERSION)
+        })
+	];
+
+	if (isDev()) {
+		plugins.push(
+			new HtmlWebpackPlugin({
+				template: 'public/index.html',
+			})
+		);
+	}
+}
+
+/**
  * Returns the config.
  */
 module.exports = {
@@ -57,15 +77,7 @@ module.exports = {
             }
         ]
     },
-    plugins: [
-        new Webpack.DefinePlugin({
-            __ENV__: JSON.stringify(getEnvironment()),
-            __VERSION__: JSON.stringify(process.env.LIB_VERSION)
-        }),
-		new HtmlWebpackPlugin({
-			template: 'public/index.html',
-		})
-    ],
+    plugins: getPlugins(),
     mode: 'development',
 	devServer: {
         allowedHosts: 'all',
