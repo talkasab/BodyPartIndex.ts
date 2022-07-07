@@ -37,6 +37,8 @@ const getPlugins = () => {
 			})
 		);
 	}
+
+	return plugins;
 }
 
 /**
