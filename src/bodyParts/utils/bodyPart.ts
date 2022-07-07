@@ -11,7 +11,7 @@ export const transformMapToBodyParts = (map: BodyPartsMap): BodyPart[] => {
     const arr = [];
 	
     for (const i in map) {
-        const data = BODY_PARTS.bodyPartsMap[i];
+        const data = BODY_PARTS.map[i];
         if (data) {
             const bodyPart = new BodyPart(data);
             arr.push(bodyPart);
@@ -30,7 +30,7 @@ export const getBodyPartById = (id: string | null): BodyPart | null => {
         return null;
     }
 
-    const data = BODY_PARTS.bodyPartsMap[id];
+    const data = BODY_PARTS.map[id];
 
     if (!data) {
         return null;

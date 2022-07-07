@@ -11,20 +11,20 @@ export const getBodyParts = (file: IBodyPartsFile): IBodyPartsResponse => {
     const containedChildren: ChildrenMap = {};
     const partOfAncestors: AncestorsMap = {};
     const partOfChildren: ChildrenMap = {};
-    const bodyPartsMap: BodyPartsMap = {};
+    const map: BodyPartsMap = {};
 
     file.bodyParts.forEach(item => {
-        bodyPartsMap[item.radlexId] = item;
+        map[item.radlexId] = item;
         initContained(containedAncestors, containedChildren, item);
         initPartOf(partOfAncestors, partOfChildren, item);
     });
 
     return {
-	    bodyPartsMap: bodyPartsMap,
-        containedAncestors: containedAncestors,
-        containedChildren: containedChildren,
-        partOfAncestors: partOfAncestors,
-        partOfChildren: partOfChildren,
+        containedAncestors,
+        containedChildren,
+        map,
+        partOfAncestors,
+        partOfChildren,
         version: file.$version
     };
 };

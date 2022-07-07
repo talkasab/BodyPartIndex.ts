@@ -15,7 +15,7 @@ export class BodyPart extends BaseBodyPart {
 	 * Returns the children.
 	 * @param {number} depth - The depth (if specified will return children up to that level).
 	 */
-	 public getAllContainedChildren (depth = -1): BodyPart[] {
+    public getAllContainedChildren (depth = -1): BodyPart[] {
         const immediateChildren = BODY_PARTS.containedChildren[this.data.radlexId];
         const map: BodyPartsMap = {};
 		

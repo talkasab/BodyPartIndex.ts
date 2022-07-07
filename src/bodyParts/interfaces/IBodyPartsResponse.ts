@@ -6,7 +6,7 @@ export type BodyPartsMap = { [ key: string]: IBodyPart };
 
 export interface IBodyPartsResponse {
 	version: string;
-	bodyPartsMap: BodyPartsMap;
+	map: BodyPartsMap;
 	containedAncestors: AncestorsMap;
     containedChildren: ChildrenMap;
     partOfAncestors: AncestorsMap;

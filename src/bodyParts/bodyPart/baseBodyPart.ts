@@ -1,6 +1,7 @@
 import { IBodyPart } from 'src/bodyParts/interfaces/IBodyPart';
 import { getBodyPartById } from 'src/bodyParts/utils/bodyPart';
 import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
+import { Code } from 'src/bodyParts/bodyPart/code';
 
 export abstract class BaseBodyPart {
 
@@ -78,7 +79,7 @@ export abstract class BaseBodyPart {
     /**
 	 * Returns the unsidedId.
 	 */
-	 public getUnsidedId (): string | null {
+    public getUnsidedId (): string | null {
         return this.data.unsidedId || null;
     }
 	
@@ -87,6 +88,20 @@ export abstract class BaseBodyPart {
 	 */
     public getUnsided (): BodyPart | null {
         return getBodyPartById(this.getUnsidedId());
+    }
+
+    /**
+	 * Returns the codes.
+	 */
+    public getCodes (): Code[] {
+        const codesData = this.data.codes || [];
+        const codes: Code[] = [];
+
+        codesData.forEach((data) => {
+            codes.push(new Code(data));
+        });
+
+        return codes;
     }
 		
 }

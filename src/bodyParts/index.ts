@@ -19,7 +19,7 @@ export class BodyPartIndex {
 	 * @param {string} radlexId - The radlexId.
 	 */
     public getById (radlexId: string): BodyPart | null {
-        const data = BODY_PARTS.bodyPartsMap[radlexId];
+        const data = BODY_PARTS.map[radlexId];
 
         if (!data) {
             return null;
@@ -39,8 +39,8 @@ export class BodyPartIndex {
             return [];
         }
         
-        for (const key in BODY_PARTS.bodyPartsMap) {
-            const data = BODY_PARTS.bodyPartsMap[key];
+        for (const key in BODY_PARTS.map) {
+            const data = BODY_PARTS.map[key];
             const bodyPartTerms = [
                 data.description,
                 ...data.synonyms || []
