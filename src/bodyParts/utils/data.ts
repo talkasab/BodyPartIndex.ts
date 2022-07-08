@@ -19,8 +19,8 @@ export const getBodyParts = (file: IBodyPartsFile, config?: IConfiguration): IBo
 
     file.bodyParts.forEach(item => {
         map[item.radlexId] = getItem(item, localCodes);
-        initContained(containedAncestors, containedChildren, item);
-        initPartOf(partOfAncestors, partOfChildren, item);
+        initHierarchy(containedAncestors, containedChildren, item.radlexId, 'containedById');
+        initHierarchy(partOfAncestors, partOfChildren, item.radlexId, 'partOfId');
     });
 
     return {
@@ -79,39 +79,22 @@ const getLocalCodes = (config?: IConfiguration): LocalCodesMap => {
 };
 
 /**
- * Initializes the contained hierarchy.
- * @param {AncestorsMap} containedAncestors - The contained ancestors.
- * @param {ChildrenMap} containedChildren - The contained children. 
- * @param {IBodyPart} item - The item.
+ * Initializes the hierarchy.
+ * @param {AncestorsMap} ancestors - The ancestors.
+ * @param {ChildrenMap} children - The children. 
+ * @param {string} radlexId - The radlexId.
+ * @param {string} key - The key.
  */
-const initContained = (containedAncestors: AncestorsMap, containedChildren: ChildrenMap, item: IBodyPart): void => {
-    containedAncestors[item.radlexId] = item.containedById;
+const initHierarchy = (ancestors: AncestorsMap, children: ChildrenMap, radlexId: string, key?: string): void => {
+    if (!key) return;
+	
+    ancestors[radlexId] = key;
 		
-    if (!containedChildren[item.containedById]) {
-        containedChildren[item.containedById] = [];
+    if (!children[key]) {
+        children[key] = [];
     }
 
-    if (item.containedById !== item.radlexId) {
-        containedChildren[item.containedById].push(item.radlexId);
-    }
-};
-
-/**
- * Initializes the partOf hierarchy.
- * @param {AncestorsMap} partOfAncestors - The partOf ancestors.
- * @param {ChildrenMap} partOfChildren - The partOf children. 
- * @param {IBodyPart} item - The item.
- */
-const initPartOf = (partOfAncestors: AncestorsMap, partOfChildren: ChildrenMap, item: IBodyPart): void => {
-    if (!item.partOfId) return;
-
-    partOfAncestors[item.radlexId] = item.partOfId;
-		
-    if (!partOfChildren[item.partOfId]) {
-        partOfChildren[item.partOfId] = [];
-    }
-
-    if (item.partOfId !== item.radlexId) {
-        partOfChildren[item.partOfId].push(item.radlexId);
+    if (key !== radlexId) {
+        children[key].push(radlexId);
     }
 };
