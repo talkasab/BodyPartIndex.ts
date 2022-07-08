@@ -1,4 +1,5 @@
 import { IBodyPartsResponse } from 'src/bodyParts/interfaces/IBodyPartsResponse';
+import { IConfiguration } from 'src/bodyParts/interfaces/IConfiguration';
 import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
 import { getBodyParts } from 'src/bodyParts/utils/data';
 import { configuration } from 'src/configuration';
@@ -9,9 +10,18 @@ export class BodyPartIndex {
 
     /**
 	 * Initializes the BodyPartIndex.
+	 * @param {IConfiguration?} config - The local configuration.
 	 */
-    public constructor () {
-        BODY_PARTS = getBodyParts(configuration.file);
+    public constructor (config?: IConfiguration) {
+        this.setUpConfiguration(config);
+    }
+
+    /**
+	 * Sets up the configuration.
+	 * @param {IConfiguration?} config - The local configuration.
+	 */
+    public setUpConfiguration (config?: IConfiguration): void {
+        BODY_PARTS = getBodyParts(configuration.file, config);
     }
 
     /**
