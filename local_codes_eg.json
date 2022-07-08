@@ -1,0 +1,501 @@
+{
+  "localBodyPartMappings": [
+    {
+      "radlexId": "RID56",
+      "localCode": {
+        "code": "3110",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID905",
+      "localCode": {
+        "code": "31129",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID294",
+      "localCode": {
+        "code": "31108",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID88",
+      "localCode": {
+        "code": "31134",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID33652",
+      "localCode": {
+        "code": "311001",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID237",
+      "localCode": {
+        "code": "34000",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID1246",
+      "localCode": {
+        "code": "31617",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID2468",
+      "localCode": {
+        "code": "31607",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID295",
+      "localCode": {
+        "code": "311106",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID187",
+      "localCode": {
+        "code": "311002",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID34804",
+      "localCode": {
+        "code": "31120",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID9080",
+      "localCode": {
+        "code": "319",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID1385",
+      "localCode": {
+        "code": "31500",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID1178",
+      "localCode": {
+        "code": "311004",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID205",
+      "localCode": {
+        "code": "31125",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID29662",
+      "localCode": {
+        "code": "7204",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID29663",
+      "localCode": {
+        "code": "7205",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID152",
+      "localCode": {
+        "code": "31117",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID1301",
+      "localCode": {
+        "code": "31601",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID7488",
+      "localCode": {
+        "code": "320",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID170",
+      "localCode": {
+        "code": "31118",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID2507",
+      "localCode": {
+        "code": "3111",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID410",
+      "localCode": {
+        "code": "311003",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID1362",
+      "localCode": {
+        "code": "31611",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID343",
+      "localCode": {
+        "code": "31107",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID974",
+      "localCode": {
+        "code": "31621",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID163",
+      "localCode": {
+        "code": "31114",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID431",
+      "localCode": {
+        "code": "31103",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID28727",
+      "localCode": {
+        "code": "31501",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID132",
+      "localCode": {
+        "code": "31138",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID7741",
+      "localCode": {
+        "code": "322",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID86",
+      "localCode": {
+        "code": "31141",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID114",
+      "localCode": {
+        "code": "31145",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID1010",
+      "localCode": {
+        "code": "3167",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID879",
+      "localCode": {
+        "code": "31609",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID34572",
+      "localCode": {
+        "code": "32201",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID1243",
+      "localCode": {
+        "code": "316",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID204",
+      "localCode": {
+        "code": "31132",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID302",
+      "localCode": {
+        "code": "31131",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID325",
+      "localCode": {
+        "code": "31130",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID39569",
+      "localCode": {
+        "code": "312",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID270",
+      "localCode": {
+        "code": "31108",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID342",
+      "localCode": {
+        "code": "311101",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID362",
+      "localCode": {
+        "code": "31113",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID366",
+      "localCode": {
+        "code": "31136",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID2509",
+      "localCode": {
+        "code": "32204",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID2638",
+      "localCode": {
+        "code": "3181",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID2639",
+      "localCode": {
+        "code": "31802",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID2660",
+      "localCode": {
+        "code": "31818",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID2743",
+      "localCode": {
+        "code": "31815",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID2869",
+      "localCode": {
+        "code": "31811",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID28545",
+      "localCode": {
+        "code": "31803",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID28829",
+      "localCode": {
+        "code": "31800",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID1850",
+      "localCode": {
+        "code": "3180",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID1968",
+      "localCode": {
+        "code": "31806",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID2010",
+      "localCode": {
+        "code": "31804",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID2107",
+      "localCode": {
+        "code": "31805",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID2177",
+      "localCode": {
+        "code": "31816",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID2318",
+      "localCode": {
+        "code": "31810",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID865",
+      "localCode": {
+        "code": "318001",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID58",
+      "localCode": {
+        "code": "31106",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID684",
+      "localCode": {
+        "code": "32019",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID774",
+      "localCode": {
+        "code": "32013",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID1079",
+      "localCode": {
+        "code": "32006",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID7587",
+      "localCode": {
+        "code": "32012",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID13211",
+      "localCode": {
+        "code": "31111",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID7589",
+      "localCode": {
+        "code": "32021",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID9573",
+      "localCode": {
+        "code": "31906",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID10054",
+      "localCode": {
+        "code": "31922",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID9392",
+      "localCode": {
+        "code": "31921",
+        "system": "NUANCE"
+      }
+    },
+    {
+      "radlexId": "RID9554",
+      "localCode": {
+        "code": "31905",
+        "system": "NUANCE"
+      }
+    }
+  ]
+}
