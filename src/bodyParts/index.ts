@@ -39,6 +39,25 @@ export class BodyPartIndex {
     }
 
     /**
+	 * Returns a BodyPart object by code.
+	 * @param {string} code - The code.
+	 */
+    public getByCode (code: string): BodyPart | null {
+        const radlexIds = BODY_PARTS.codes[code];
+        if (!radlexIds?.length) {
+            return null;
+        }
+
+		
+        const data = BODY_PARTS.map[radlexIds[0]];
+        if (!data) {
+            return null;
+        }
+
+        return new BodyPart(data);
+    }
+
+    /**
 	 * Returns the BodyParts that have a description or synonyms corresponding to a search value.
 	 * @param {string} searchValue - The search value.
 	 */

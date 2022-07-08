@@ -1,4 +1,11 @@
-import { AncestorsMap, BodyPartsMap, ChildrenMap, IBodyPartsResponse, LocalCodesMap } from 'src/bodyParts/interfaces/IBodyPartsResponse';
+import { 
+    AncestorsMap, 
+    BodyPartsMap, 
+    ChildrenMap, 
+    CodesMap, 
+    IBodyPartsResponse, 
+    LocalCodesMap 
+} from 'src/bodyParts/interfaces/IBodyPartsResponse';
 import { IBodyPartsFile } from 'src/bodyParts/interfaces/IBodyPartsFile';
 import { IConfiguration } from 'src/bodyParts/interfaces/IConfiguration';
 import { IBodyPart } from 'src/bodyParts/interfaces/IBodyPart';
@@ -14,16 +21,20 @@ export const getBodyParts = (file: IBodyPartsFile, config?: IConfiguration): IBo
     const partOfAncestors: AncestorsMap = {};
     const partOfChildren: ChildrenMap = {};
     const map: BodyPartsMap = {};
-
+    const codes: CodesMap = {};
+	
     const localCodes = getLocalCodes(config);
 
     file.bodyParts.forEach(item => {
         map[item.radlexId] = getItem(item, localCodes);
+
         initHierarchy(containedAncestors, containedChildren, item.radlexId, item.containedById);
         initHierarchy(partOfAncestors, partOfChildren, item.radlexId, item.partOfId);
+        initCodes(map[item.radlexId], codes);
     });
 
     return {
+        codes,
         containedAncestors,
         containedChildren,
         map,
@@ -64,14 +75,14 @@ const getLocalCodes = (config?: IConfiguration): LocalCodesMap => {
 
     const map: LocalCodesMap = {};
 
-    config.localBodyPartMappings.forEach(localCode => {
-        if (!map[localCode.radlexId]) {
-            map[localCode.radlexId] = [];
+    config.localBodyPartMappings.forEach(data => {
+        if (!map[data.radlexId]) {
+            map[data.radlexId] = [];
         }
 
-        map[localCode.radlexId].push({
-            code: localCode.localCode.code,
-            system: localCode.localCode.system
+        map[data.radlexId].push({
+            code: data.localCode.code,
+            system: data.localCode.system
         });
     });
 
@@ -97,4 +108,21 @@ const initHierarchy = (ancestors: AncestorsMap, children: ChildrenMap, radlexId:
     if (key !== radlexId) {
         children[key].push(radlexId);
     }
+};
+
+/**
+ * Initializes the codes.
+ * @param {IBodyPart} item - The item.
+ * @param {CodesMap} map - The map.
+ */
+const initCodes = (item: IBodyPart, map: CodesMap): void => {
+    const codes = item.codes || [];
+    
+    codes.forEach(data => {
+        if (!map[data.code]) {
+            map[data.code] = [];
+        }
+
+        map[data.code].push(item.radlexId);
+    });
 };
