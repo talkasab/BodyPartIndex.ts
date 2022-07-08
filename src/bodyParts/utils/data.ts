@@ -19,8 +19,8 @@ export const getBodyParts = (file: IBodyPartsFile, config?: IConfiguration): IBo
 
     file.bodyParts.forEach(item => {
         map[item.radlexId] = getItem(item, localCodes);
-        initHierarchy(containedAncestors, containedChildren, item.radlexId, 'containedById');
-        initHierarchy(partOfAncestors, partOfChildren, item.radlexId, 'partOfId');
+        initHierarchy(containedAncestors, containedChildren, item.radlexId, item.containedById);
+        initHierarchy(partOfAncestors, partOfChildren, item.radlexId, item.partOfId);
     });
 
     return {
