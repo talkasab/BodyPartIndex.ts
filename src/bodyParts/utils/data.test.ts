@@ -111,3 +111,93 @@ describe('getBodyParts()', () => {
     });
 
 });
+
+describe('getBodyParts() with local codes', () => {
+    let result: IBodyPartsResponse;
+    const fileMock = {
+        $schema: 'SCHEMA',
+        $version: '1.0.0',
+        bodyParts: [ bodyPart1, bodyPart2, bodyPart3, bodyPart4, bodyPart5 ]
+    };
+
+    beforeEach(() => {
+        result = getBodyParts(fileMock, {
+            localBodyPartMappings: [
+                {
+                    localCode: {
+                        code: 'AAABBBCC',
+                        system: 'LOCAL'
+                    },
+                    radlexId: 'RID901'
+                },
+                {
+                    localCode: {
+                        code: 'DDDEEEFF',
+                        system: 'LOCAL'
+                    },
+                    radlexId: 'RID904'
+                }
+            ]
+        });
+    });
+
+    it ('returns the correct codes with added local codes', () => {
+        expect(result.codes).toEqual({ 
+            '78320081': [ 'RID901' ], 
+            '78320082': [ 'RID902' ], 
+            '78320083': [ 'RID903' ], 
+            '78320085': [ 'RID905' ],
+            'AAABBBCC': [ 'RID901' ],
+            'DDDEEEFF': [ 'RID904' ]
+        });
+    });
+
+});
+
+describe('getBodyParts() with duplicate codes', () => {
+    let result: IBodyPartsResponse;
+    const fileMock = {
+        $schema: 'SCHEMA',
+        $version: '1.0.0',
+        bodyParts: [ bodyPart1, bodyPart2, bodyPart3, bodyPart4, bodyPart5 ]
+    };
+
+    const warnMock = jest.spyOn(console, 'warn').mockImplementation();
+
+    beforeEach(() => {
+        result = getBodyParts(fileMock, {
+            localBodyPartMappings: [
+                {
+                    localCode: {
+                        code: '78320081',
+                        system: 'LOCAL'
+                    },
+                    radlexId: 'RID901'
+                },
+                {
+                    localCode: {
+                        code: '78320081',
+                        system: 'LOCAL'
+                    },
+                    radlexId: 'RID902'
+                }
+            ]
+        });
+    });
+
+    it ('returns the correct codes with duplicates', () => {
+        expect(result.codes).toEqual({ 
+            '78320081': [ 'RID901', 'RID902' ], 
+            '78320082': [ 'RID902' ], 
+            '78320083': [ 'RID903' ], 
+            '78320085': [ 'RID905' ]
+        });
+    });
+
+    it ('calls console.warn', () => {
+        expect(warnMock).toBeCalledWith(
+            'Duplicate codes found. Please fix them.', 
+            { '78320081': [ 'RID901', 'RID902' ] }
+        );
+    });
+});

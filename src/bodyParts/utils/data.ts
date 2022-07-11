@@ -71,7 +71,7 @@ const getItem = (item: IBodyPart, localCodes: LocalCodesMap): IBodyPart => {
  * @param {IConfiguration?} config - The local configuration.
  */
 const getLocalCodes = (config?: IConfiguration): LocalCodesMap => {
-    if (!config?.localBodyPartMappings || !Array.isArray(config?.localBodyPartMappings)) {
+    if (!config?.localBodyPartMappings) {
         return {};
     }
 
@@ -125,7 +125,9 @@ const initCodes = (item: IBodyPart, map: CodesMap): void => {
             map[data.code] = [];
         }
 
-        map[data.code].push(item.radlexId);
+        if (!map[data.code].includes(item.radlexId)) {
+            map[data.code].push(item.radlexId);
+        }
     });
 };
 
