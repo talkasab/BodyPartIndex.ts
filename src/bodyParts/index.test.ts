@@ -21,7 +21,10 @@ const bodyPart3 = {
     codes: [ { code: '78320083', system: 'SNOMED' } ],
     containedById: 'RID901',
     description: 'leg',
-    radlexId: 'RID903'
+    radlexId: 'RID903',
+    synonyms: [
+        'feet'
+    ]
 };
 
 const bodyPart4 = {
@@ -43,12 +46,13 @@ const bodyPart5 = {
     radlexId: 'RID905'
 };
 
+const fileMock = {
+    $schema: 'MY_SCHEMA',
+    $version: '2.0.0',
+    bodyParts: [ bodyPart1, bodyPart2, bodyPart3, bodyPart4, bodyPart5 ]
+};
+
 describe('setUpConfiguration()', () => {
-    const fileMock = {
-        $schema: 'MY_SCHEMA',
-        $version: '2.0.0',
-        bodyParts: [ bodyPart1, bodyPart2, bodyPart3, bodyPart4, bodyPart5 ]
-    };
 
     beforeEach(() => {
         configuration.file = fileMock;
@@ -73,11 +77,6 @@ describe('setUpConfiguration()', () => {
 
 describe('get()', () => {
     let index: BodyPartIndex;
-    const fileMock = {
-        $schema: 'MY_SCHEMA',
-        $version: '2.0.0',
-        bodyParts: [ bodyPart1, bodyPart2, bodyPart3, bodyPart4, bodyPart5 ]
-    };
 
     beforeEach(() => {
         configuration.file = fileMock;
@@ -129,4 +128,36 @@ describe('get()', () => {
         );
     });
 
+});
+
+describe('search()', () => {
+    let index: BodyPartIndex;
+
+    beforeEach(() => {
+        configuration.file = fileMock;
+        index = new BodyPartIndex();
+    });
+
+    it ('returns empty array for searchValue less than 3', () => {
+        expect(index.search('av')).toEqual([]);
+    });
+
+    it ('returns the correct BodyPart (eye)', () => {
+        expect(index.search('eye')).toEqual([ new BodyPart(bodyPart4) ]);
+    });
+
+    it ('returns the correct BodyPart (eye)', () => {
+        expect(index.search('aaa')).toEqual([ new BodyPart(bodyPart4) ]);
+    });
+
+    it ('returns the correct BodyParts (feet)', () => {
+        expect(index.search('feet')).toEqual([ 
+            new BodyPart(bodyPart2), 
+            new BodyPart(bodyPart3) 
+        ]);
+    });
+
+    it ('returns empty array when no BodyParts are found', () => {
+        expect(index.search('feet2')).toEqual([]);
+    });
 });

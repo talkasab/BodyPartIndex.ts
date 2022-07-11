@@ -44,12 +44,13 @@ export class BodyPartIndex {
 
     /**
 	 * Returns the BodyParts that have a description or synonyms corresponding to a search value.
+	 * Minimum searchValue length (3 chars).
 	 * @param {string} searchValue - The search value.
 	 */
     public search (searchValue: string): BodyPart[] {
         const bodyParts = [];
 
-        if (searchValue.length < 4) {
+        if (searchValue.length < 3) {
             return [];
         }
         

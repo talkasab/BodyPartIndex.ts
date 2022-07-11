@@ -76,6 +76,9 @@ Object {
       "containedById": "RID901",
       "description": "leg",
       "radlexId": "RID903",
+      "synonyms": Array [
+        "feet",
+      ],
     },
     "RID904": Object {
       "containedById": "RID903",
