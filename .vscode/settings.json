@@ -1,10 +1,9 @@
 {
     "editor.tabSize": 4,
-    "window.zoomLevel": 0,
     "editor.detectIndentation": false,
     "editor.insertSpaces": false,
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
-	"files.eol": "\n",
+    "files.eol": "\n",
 }
