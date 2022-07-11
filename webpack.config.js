@@ -4,7 +4,7 @@ const Webpack = require('webpack');
 const Path = require('path');
 
 /**
- * Returns if is dev.
+ * Returns if environment is dev.
  */
 const isDev = () => !process.env.NODE_ENV;
 

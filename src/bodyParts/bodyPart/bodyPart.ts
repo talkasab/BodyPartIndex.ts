@@ -28,10 +28,10 @@ export class BodyPart extends BaseBodyPart {
 
     /**
 	 * Returns if the bodyPart is a contained descendant of a parent.
-	 * @param {string} parentRadlexId - The parent radlex id.
+	 * @param {string | BodyPart} parent - The parent.
 	 */
-    public isContained (parentRadlexId: string): boolean {
-        return this.isDescendant(parentRadlexId, this.getAllContainedAncestors());
+    public isContained (parent: string | BodyPart): boolean {
+        return this.isDescendant(parent, this.getAllContainedAncestors());
     }
 
     /**
@@ -49,18 +49,18 @@ export class BodyPart extends BaseBodyPart {
     }
 
     /**
-	 * Returns all the parOf ancestors.
+	 * Returns all the partOf ancestors.
 	 */
     public getAllPartOfAncestors (): BodyPart[] {
         return this.getAllAncestors(BODY_PARTS.partOfAncestors);
     }
 
     /**
-	 * Returns if the bodyPart is a parOf descendant of a parent.
-	 * @param {string} parentRadlexId - The parent radlex id.
+	 * Returns if the BodyPart is a partOf descendant of a parent.
+	 * @param {string | BodyPart} parent - The parent.
 	 */
-    public isPartOf (parentRadlexId: string): boolean {
-        return this.isDescendant(parentRadlexId, this.getAllPartOfAncestors());
+    public isPartOf (parent: string): boolean {
+        return this.isDescendant(parent, this.getAllPartOfAncestors());
     }
 
     /**
@@ -119,11 +119,14 @@ export class BodyPart extends BaseBodyPart {
     }
 
     /**
-	 * Returns if the bodyPart is a descendant of a parent.
-	 * @param {string} parentRadlexId - The parent radlex id.
+	 * Returns if the BodyPart is a descendant of a parent.
+	 * @param {string | BodyPart} parent - The parent.
 	 * @param {BodyPart[]} ancestors - The ancestors.
 	 */
-    private isDescendant (parentRadlexId: string, ancestors: BodyPart[]): boolean {      
+    private isDescendant (parent: string | BodyPart, ancestors: BodyPart[]): boolean {
+        const parentRadlexId = parent instanceof BodyPart ? 
+            parent.getData().radlexId : parent;
+
         for (let i = 0; i < ancestors.length; i++) {
             if (ancestors[i].getData().radlexId === parentRadlexId) {
                 return true;

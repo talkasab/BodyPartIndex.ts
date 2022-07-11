@@ -4,7 +4,7 @@ import { BODY_PARTS } from 'src/bodyParts';
 export type BodyPartsMap = { [key: string]: boolean };
 
 /**
- * Transform a map to an array of body parts.
+ * Transforms a map into an array of BodyParts.
  * @param {BodyPartsMap} map - The map.
  */
 export const transformMapToBodyParts = (map: BodyPartsMap): BodyPart[] => {
@@ -22,7 +22,7 @@ export const transformMapToBodyParts = (map: BodyPartsMap): BodyPart[] => {
 };
 
 /**
- * Returns the body part by radlex id.
+ * Returns a BodyPart by radlex id.
  * @param {string | null} id - The id.
  */
 export const getBodyPartById = (id: string | null): BodyPart | null => {

@@ -3,7 +3,7 @@ import { ICode } from 'src/bodyParts/interfaces/ICode';
 export class Code {
 
     /**
-	 * The code constructor initialization.
+	 * The Code constructor initialization.
 	 * @param {ICode} data - The data.
 	 */
     public constructor (

@@ -33,6 +33,8 @@ export const getBodyParts = (file: IBodyPartsFile, config?: IConfiguration): IBo
         initCodes(map[item.radlexId], codes);
     });
 
+    verifyDuplicateCodes(codes);
+
     return {
         codes,
         containedAncestors,
@@ -125,4 +127,27 @@ const initCodes = (item: IBodyPart, map: CodesMap): void => {
 
         map[data.code].push(item.radlexId);
     });
+};
+
+/**
+ * Outputs a warning if duplicate codes found.
+ * @param {CodesMap} codes - The codes. 
+ */
+const verifyDuplicateCodes = (codes: CodesMap): boolean => {
+    const duplicates: CodesMap = {};
+
+    for (const i in codes) {
+        if (codes[i].length > 1) {
+            duplicates[i] = codes[i];
+        }
+    }
+
+    if (!Object.keys(duplicates).length) { 
+        return false;
+    }
+    
+    // eslint-disable-next-line no-console
+    console.warn('Duplicate codes found. Please fix them.', duplicates);
+    
+    return true;
 };

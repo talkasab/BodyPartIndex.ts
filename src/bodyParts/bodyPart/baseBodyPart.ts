@@ -14,7 +14,7 @@ export abstract class BaseBodyPart {
     ) { }
 	
     /**
-	 * Returns the body part data.
+	 * Returns the BodyPart data.
 	 */
     public getData (): IBodyPart {
         return this.data;
@@ -35,7 +35,7 @@ export abstract class BaseBodyPart {
     }
 
     /**
-	 * Returns the containedById.
+	 * Returns the partOfId.
 	 */
     public getPartOfId (): string | null {
         return this.data.partOfId || null;

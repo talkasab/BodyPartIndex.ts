@@ -17,7 +17,7 @@
   "devDependencies": {
     "@tim.mouskhelichvili/eslint-config-typescript": "^2.0.0",
     "@types/jest": "^28.1.4",
-    "@types/node": "^18.0.1",
+    "@types/node": "18.0.3",
     "cross-env": "^7.0.3",
     "dts-bundle-generator": "^6.12.0",
     "html-webpack-plugin": "^5.5.0",

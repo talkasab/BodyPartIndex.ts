@@ -25,36 +25,21 @@ export class BodyPartIndex {
     }
 
     /**
-	 * Returns a BodyPart object by radlexId.
-	 * @param {string} radlexId - The radlexId.
+	 * Returns a BodyPart that matches a selector.
+	 * @param {string} selector - The selector.
 	 */
-    public getById (radlexId: string): BodyPart | null {
-        const data = BODY_PARTS.map[radlexId];
-
-        if (!data) {
-            return null;
+    public get (selector: string): BodyPart | null {
+        let bodyPart = this.getById(selector);
+        if (bodyPart) {
+            return bodyPart;
         }
 
-        return new BodyPart(data);
-    }
-
-    /**
-	 * Returns a BodyPart object by code.
-	 * @param {string} code - The code.
-	 */
-    public getByCode (code: string): BodyPart | null {
-        const radlexIds = BODY_PARTS.codes[code];
-        if (!radlexIds?.length) {
-            return null;
+        bodyPart = this.getByCode(selector);
+        if (bodyPart) {
+            return bodyPart;
         }
 
-		
-        const data = BODY_PARTS.map[radlexIds[0]];
-        if (!data) {
-            return null;
-        }
-
-        return new BodyPart(data);
+        return null;
     }
 
     /**
@@ -82,6 +67,39 @@ export class BodyPartIndex {
         }
 
         return bodyParts;
+    }
+
+    /**
+	 * Returns a BodyPart by radlexId.
+	 * @param {string} radlexId - The radlexId.
+	 */
+    private getById (radlexId: string): BodyPart | null {
+        const data = BODY_PARTS.map[radlexId];
+	
+        if (!data) {
+            return null;
+        }
+	
+        return new BodyPart(data);
+    }
+	
+    /**
+	 * Returns a BodyPart by code.
+	 * @param {string} code - The code.
+	 */
+    private getByCode (code: string): BodyPart | null {
+        const radlexIds = BODY_PARTS.codes[code];
+        if (!radlexIds?.length) {
+            return null;
+        }
+	
+			
+        const data = BODY_PARTS.map[radlexIds[0]];
+        if (!data) {
+            return null;
+        }
+	
+        return new BodyPart(data);
     }
 
 }
