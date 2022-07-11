@@ -12,7 +12,7 @@ export const transformMapToBodyParts = (map: BodyPartsMap): BodyPart[] => {
 	
     for (const i in map) {
         const data = BODY_PARTS.map[i];
-        if (data) {
+        if (data && map[i]) {
             const bodyPart = new BodyPart(data);
             arr.push(bodyPart);
         }

@@ -21,7 +21,7 @@ module.exports = {
         ]
     ],
     'setupFiles': [
-        '<rootDir>/src/configs/testGlobals.ts'
+        '<rootDir>/src/tests/globals.ts'
     ],
     'testEnvironment': 'jsdom',
     'testMatch': [ '**/src/**/*test.(ts|tsx)' ],
