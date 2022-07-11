@@ -95,6 +95,7 @@ export class BodyPartIndex {
 	
 			
         const data = BODY_PARTS.map[radlexIds[0]];
+        /* istanbul ignore next */
         if (!data) {
             return null;
         }
