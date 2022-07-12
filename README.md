@@ -53,7 +53,6 @@ To get a body part by id, you need to use the `get` function.
 
 ```typescript
 const index = new BodyPartIndex();
-
 const bodyPart = index.get('RID294');
 ```
 
@@ -65,7 +64,6 @@ The `get` function also works with codes (including local ones).
 
 ```typescript
 const index = new BodyPartIndex();
-
 const bodyPart = index.get('265256');
 ```
 ## How to search for body parts based on names or synonyms?
