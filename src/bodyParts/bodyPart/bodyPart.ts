@@ -59,7 +59,7 @@ export class BodyPart extends BaseBodyPart {
 	 * Returns if the BodyPart is a partOf descendant of a parent.
 	 * @param {string | BodyPart} parent - The parent.
 	 */
-    public isPartOf (parent: string): boolean {
+    public isPartOf (parent: string | BodyPart): boolean {
         return this.isDescendant(parent, this.getAllPartOfAncestors());
     }
 
