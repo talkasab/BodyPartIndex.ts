@@ -1,5 +1,4 @@
 import { configuration } from 'src/configuration';
-export { BodyPartIndex } from 'src/bodyParts';
 
 export class AnatomicLocationLibrary {
 
@@ -13,3 +12,7 @@ export class AnatomicLocationLibrary {
 }
 
 window.AnatomicLocationLibrary = new AnatomicLocationLibrary();
+
+export { BodyPartIndex } from 'src/bodyParts';
+export { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
+export { Code } from 'src/bodyParts/bodyPart/code';

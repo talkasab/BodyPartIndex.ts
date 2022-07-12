@@ -12,12 +12,14 @@
     "verify:typescript": "tsc --noEmit",
     "verify:eslint": "eslint src --ext .tsx --ext .ts",
     "verify": "npm run verify:typescript && npm run verify:eslint",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+	"publish": "npm run build && clean-publish --access public"
   },
   "devDependencies": {
     "@tim.mouskhelichvili/eslint-config-typescript": "^2.0.0",
     "@types/jest": "^28.1.4",
     "@types/node": "18.0.3",
+    "clean-publish": "^4.0.1",
     "cross-env": "^7.0.3",
     "dts-bundle-generator": "^6.12.0",
     "html-webpack-plugin": "^5.5.0",

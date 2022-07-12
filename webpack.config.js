@@ -49,6 +49,7 @@ module.exports = {
     entry: './src/index.ts',
     output: {
         path: Path.resolve(__dirname, 'dist'),
+		libraryTarget: 'umd',
         filename: 'index.js'
     },
     devtool: isDev() ? 'source-map' : false,
