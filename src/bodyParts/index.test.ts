@@ -1,6 +1,6 @@
 import { BodyPartIndex, BODY_PARTS } from 'src/bodyParts/index';
+import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
 import { configuration } from 'src/configuration';
-import { BodyPart } from './bodyPart/bodyPart';
 
 const bodyPart1 = {
     codes: [ { code: '78320081', system: 'SNOMED' } ],
