@@ -94,6 +94,10 @@ module.exports = {
             new TerserPlugin({
                 parallel: true,
                 terserOptions: {
+					mangle: {
+						keep_classnames: true,
+						keep_fnames: true,
+					},
                     output: {
                         comments: false
                     }
