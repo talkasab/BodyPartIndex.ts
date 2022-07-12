@@ -8,7 +8,7 @@ Provides data and simple libraries for manipulating a standard list of anatomic 
 npm i path-to-library
 ```
 
-# Scenarios
+# BodyPartIndex (Scenarios)
 
 ## How to open the library?
 
@@ -67,4 +67,36 @@ The `get` function also works with codes (including local ones).
 const index = new BodyPartIndex();
 
 const bodyPart = index.get('265256');
+```
+## How to search for body parts based on names or synonyms?
+
+The `search` function will return all the BodyParts that match a specific search value.
+
+```typescript
+const index = new BodyPartIndex();
+const bodyParts = index.search('adnexa');
+```
+
+# BodyPart (Scenarios)
+
+## How to determine if one body part is contained by another?
+
+To determine if a one body part is contained by another, use the `isContained` function.
+
+```typescript
+const index = new BodyPartIndex();
+const bodyPart1 = index.get('RID56');
+const bodyPart2 = index.get('RID199');
+const isContained = bodyPart2?.isContained(bodyPart1);
+```
+
+## How to determine if one body part is part of another?
+
+To determine if a one body part is part of another, use the `isPartOf` function.
+
+```typescript
+const index = new BodyPartIndex();
+const bodyPart1 = index.get('RID480');
+const bodyPart2 = index.get('RID905');
+const isPartOf = bodyPart2?.isPartOf(bodyPart1);
 ```
