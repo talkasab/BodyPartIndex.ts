@@ -96,7 +96,7 @@ To get the immediate contained children, use the `getImmediateContainedChildren`
 
 ```typescript
 const index = new BodyPartIndex();
-const bodyPart1 = index.get('RID480');
+const bodyPart1 = index.get('RID39569');
 const immediateChildren = bodyPart1?.getImmediateContainedChildren();
 ```
 
@@ -104,7 +104,7 @@ To get all the contained children, use the `getAllContainedChildren` function.
 
 ```typescript
 const index = new BodyPartIndex();
-const bodyPart1 = index.get('RID480');
+const bodyPart1 = index.get('RID39569');
 const children = bodyPart1?.getAllContainedChildren();
 ```
 
@@ -153,6 +153,6 @@ To get the partOf ancestors of a body part, use the `getAllPartOfAncestors` func
 
 ```typescript
 const index = new BodyPartIndex();
-const bodyPart1 = index.get('RID480');
+const bodyPart1 = index.get('RID579');
 const ancestors = bodyPart1?.getAllPartOfAncestors();
 ```
