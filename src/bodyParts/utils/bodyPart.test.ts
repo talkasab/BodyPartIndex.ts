@@ -1,5 +1,5 @@
-import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
 import { getBodyPartById, transformMapToBodyParts } from 'src/bodyParts/utils/bodyPart';
+import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
 import { mockBodyParts } from 'src/tests/utils';
 
 const radlexIdAAA = {
