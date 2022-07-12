@@ -12,7 +12,7 @@ npm i path-to-library
 
 ## How to open the library?
 
-To open the library, you first need to import it in your project. Then, you can use the `BodyPartIndex` object.
+To open the library, you first need to import it into your project. Then, you can use the `BodyPartIndex` object.
 
 ```typescript
 import { BodyPartIndex } from '@talkasab/anatomic_locations';
@@ -127,4 +127,32 @@ const index = new BodyPartIndex();
 const bodyPart1 = index.get('RID480');
 const bodyPart2 = index.get('RID905');
 const isPartOf = bodyPart2?.isPartOf(bodyPart1);
+```
+
+## How to get the partOf children of a body part?
+
+To get the immediate partOf children, use the `getImmediatePartOfChildren` function.
+
+```typescript
+const index = new BodyPartIndex();
+const bodyPart1 = index.get('RID480');
+const immediateChildren = bodyPart1?.getImmediatePartOfChildren();
+```
+
+To get all the partOf children, use the `getAllPartOfChildren` function.
+
+```typescript
+const index = new BodyPartIndex();
+const bodyPart1 = index.get('RID480');
+const children = bodyPart1?.getAllPartOfChildren();
+```
+
+## How to get the partOf ancestors of a body part?
+
+To get the partOf ancestors of a body part, use the `getAllPartOfAncestors` function.
+
+```typescript
+const index = new BodyPartIndex();
+const bodyPart1 = index.get('RID480');
+const ancestors = bodyPart1?.getAllPartOfAncestors();
 ```
