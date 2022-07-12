@@ -4,7 +4,7 @@ export { BodyPartIndex } from 'src/bodyParts';
 export class AnatomicLocationLibrary {
 
     /**
- 	 * Returns the anatomic location version (for debugging purposes).
+ 	 * Returns the library version (for debugging purposes).
 	 */
     public getVersion (): string {
         return configuration.version;

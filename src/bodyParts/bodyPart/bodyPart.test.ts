@@ -1,6 +1,6 @@
+import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
 import { getBodyParts } from 'src/bodyParts/utils/data';
 import { mockBodyParts } from 'src/tests/utils';
-import { BodyPart } from './bodyPart';
 
 const bodyPart1 = {
     codes: [ { code: '78320081', system: 'SNOMED' } ],

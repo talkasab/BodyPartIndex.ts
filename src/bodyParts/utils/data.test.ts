@@ -194,7 +194,7 @@ describe('getBodyParts() with duplicate codes', () => {
         });
     });
 
-    it ('calls console.warn', () => {
+    it ('calls console.warn correctly', () => {
         expect(warnMock).toBeCalledWith(
             'Duplicate codes found. Please fix them.', 
             { '78320081': [ 'RID901', 'RID902' ] }

@@ -53,7 +53,6 @@ const fileMock = {
 };
 
 describe('setUpConfiguration()', () => {
-
     beforeEach(() => {
         configuration.file = fileMock;
         new BodyPartIndex({
@@ -72,7 +71,6 @@ describe('setUpConfiguration()', () => {
     it ('matches the BODY_PARTS object', () => {
         expect(BODY_PARTS).toMatchSnapshot();
     });
-
 });
 
 describe('get()', () => {
@@ -127,7 +125,6 @@ describe('get()', () => {
             })
         );
     });
-
 });
 
 describe('search()', () => {

@@ -21,7 +21,7 @@ export abstract class BaseBodyPart {
     }
 
     /**
-	 * Returns the containedById.
+	 * Returns the containedBy id.
 	 */
     public getContainedById (): string {
         return this.data.containedById;
@@ -35,7 +35,7 @@ export abstract class BaseBodyPart {
     }
 
     /**
-	 * Returns the partOfId.
+	 * Returns the partOf id.
 	 */
     public getPartOfId (): string | null {
         return this.data.partOfId || null;
@@ -49,7 +49,7 @@ export abstract class BaseBodyPart {
     }
 
     /**
-	 * Returns the leftId.
+	 * Returns the left id.
 	 */
     public getLeftId (): string | null {
         return this.data.leftId || null;
@@ -63,7 +63,7 @@ export abstract class BaseBodyPart {
     }
 
     /**
-	 * Returns the rightId.
+	 * Returns the right id.
 	 */
     public getRightId (): string | null {
         return this.data.rightId || null;
@@ -77,7 +77,7 @@ export abstract class BaseBodyPart {
     }
 
     /**
-	 * Returns the unsidedId.
+	 * Returns the unsided id.
 	 */
     public getUnsidedId (): string | null {
         return this.data.unsidedId || null;

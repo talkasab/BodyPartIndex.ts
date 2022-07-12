@@ -99,7 +99,7 @@ describe('BaseBodyPart', () => {
         expect(bodyPart.getPartOf()).toEqual(new BodyPart(bodyPartPartOfId));
     });
 
-    it('returns the correct left by id', () => {
+    it('returns the correct left id', () => {
         expect(bodyPart.getLeftId()).toBe(bodyPart1.leftId);
     });
 
