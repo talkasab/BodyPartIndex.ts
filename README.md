@@ -90,6 +90,34 @@ const bodyPart2 = index.get('RID199');
 const isContained = bodyPart2?.isContained(bodyPart1);
 ```
 
+## How to get the contained children of a body part?
+
+To get the immediate contained children, use the `getImmediateContainedChildren` function.
+
+```typescript
+const index = new BodyPartIndex();
+const bodyPart1 = index.get('RID480');
+const immediateChildren = bodyPart1?.getImmediateContainedChildren();
+```
+
+To get all the contained children, use the `getAllContainedChildren` function.
+
+```typescript
+const index = new BodyPartIndex();
+const bodyPart1 = index.get('RID480');
+const children = bodyPart1?.getAllContainedChildren();
+```
+
+## How to get the contained ancestors of a body part?
+
+To get the contained ancestors of a body part, use the `getAllContainedAncestors` function.
+
+```typescript
+const index = new BodyPartIndex();
+const bodyPart1 = index.get('RID480');
+const ancestors = bodyPart1?.getAllContainedAncestors();
+```
+
 ## How to determine if one body part is part of another?
 
 To determine if a one body part is part of another, use the `isPartOf` function.
