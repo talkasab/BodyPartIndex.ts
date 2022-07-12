@@ -15,7 +15,7 @@ npm i path-to-library
 To open the library, you first need to import it into your project. Then, you can use the `BodyPartIndex` object.
 
 ```typescript
-import { BodyPartIndex } from '@talkasab/anatomic_locations';
+import { BodyPartIndex } from 'path-to-library';
 
 const index = new BodyPartIndex();
 ```
