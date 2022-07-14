@@ -1,17 +1,9 @@
-import { configuration } from 'src/configuration';
-
-export class AnatomicLocationLibrary {
-
-    /**
- 	 * Returns the library version (for debugging purposes).
-	 */
-    public getVersion (): string {
-        return configuration.version;
-    }
-
-}
-
-window.AnatomicLocationLibrary = new AnatomicLocationLibrary();
+/**
+ * Returns the library version (for debugging purposes).
+ */
+window.getBodyPartsIndexVersion = (): string => {
+    return __VERSION__;
+};
 
 export { BodyPartIndex } from 'src/bodyParts';
 export { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';

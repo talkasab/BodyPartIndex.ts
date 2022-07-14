@@ -1,8 +1,8 @@
-import { AnatomicLocationLibrary, BodyPartIndex, BodyPart, Code } from 'src';
+import { BodyPartIndex, BodyPart, Code } from 'src';
 
 describe('AnatomicLocationLibrary', () => {
     it('returns the correct library version', () => {
-        expect(new AnatomicLocationLibrary().getVersion()).toBe('testVersion');
+        expect(window.getBodyPartsIndexVersion()).toBe('testVersion');
     });
 
     it ('exports the BodyPartIndex correctly', () => {

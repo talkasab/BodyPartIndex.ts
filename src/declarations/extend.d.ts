@@ -1,16 +1,14 @@
-import { AnatomicLocationLibrary } from 'src';
 export { BodyPartIndex } from 'src/bodyParts/index';
 export { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
-export { AnatomicLocationLibrary };
 
 declare global {
 
 	interface Window {
 
 		/**
-		 * The anatomic location library.
+		 * Returns the library version (for debugging purposes).
 		 */
-		AnatomicLocationLibrary: AnatomicLocationLibrary;
+		 getBodyPartsIndexVersion: () => string;
 
 	}
 

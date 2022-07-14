@@ -17,14 +17,6 @@ export class BodyPartIndex {
     }
 
     /**
-	 * Sets up the configuration.
-	 * @param {IConfiguration?} config - The local configuration.
-	 */
-    public setUpConfiguration (config?: IConfiguration): void {
-        BODY_PARTS = getBodyParts(configuration.file, config);
-    }
-
-    /**
 	 * Returns a BodyPart that matches a selector.
 	 * @param {string} selector - The selector.
 	 */
@@ -88,7 +80,7 @@ export class BodyPartIndex {
 	 * Returns a BodyPart by code.
 	 * @param {string} code - The code.
 	 */
-    private getByCode (code: string): BodyPart | null {
+    public getByCode (code: string): BodyPart | null {
         const radlexIds = BODY_PARTS.codes[code];
         if (!radlexIds?.length) {
             return null;
@@ -102,6 +94,14 @@ export class BodyPartIndex {
         }
 	
         return new BodyPart(data);
+    }
+
+    /**
+	 * Sets up the configuration.
+	 * @param {IConfiguration?} config - The local configuration.
+	 */
+    private setUpConfiguration (config?: IConfiguration): void {
+        BODY_PARTS = getBodyParts(configuration.file, config);
     }
 
 }

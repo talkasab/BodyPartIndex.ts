@@ -1,5 +1,5 @@
 {
-  "name": "@talkasab/anatomic_locations",
+  "name": "@talkasab/body_part_index",
   "version": "0.0.1",
   "description": "Provides data and simple libraries for manipulating a standard list of anatomic locations.",
   "main": "dist/index.js",

@@ -4,6 +4,5 @@ import { IBodyPartsFile } from 'src/bodyParts/interfaces/IBodyPartsFile';
 const file = require('body_parts.json') as IBodyPartsFile;
 
 export const configuration = {
-    file,
-    version: __VERSION__
+    file
 };
