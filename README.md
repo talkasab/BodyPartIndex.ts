@@ -52,9 +52,17 @@ const index = new BodyPartIndex({
 To get a body part by id or any code (include local codes), you need to use the `get` function.
 
 ```typescript
-const index = new BodyPartIndex( [ 
-	{ localCode: {code:'THX1138', system: 'LOCAL'}, radlexId: 'RID294'}
-] );
+const index = new BodyPartIndex({
+    localBodyPartMappings: [
+        { 
+            localCode: { 
+                code: 'THX1138', 
+                system: 'LOCAL' 
+            }, 
+            radlexId: 'RID294' 
+        }
+    ]
+});
 const bodyPart = index.get('RID294');
 const bodyPart2 = index.get('265256');  // FMA code
 const bodyPart3 = index.get('THX1138'); // Local code
