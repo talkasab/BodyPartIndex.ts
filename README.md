@@ -31,7 +31,7 @@ const index = new BodyPartIndex({
 
             localCode: {
                 code: '3110',
-                system: 'NUANCE'
+                system: 'StElsewhere'
             },
             radlexId: 'RID56'
         },
@@ -39,7 +39,7 @@ const index = new BodyPartIndex({
 
             localCode: {
                 code: '31129',
-                system: 'NUANCE'
+                system: 'StElsewhere'
             },
             radlexId: 'RID905'
         }
@@ -47,13 +47,15 @@ const index = new BodyPartIndex({
 });
 ```
 
-## How to get a particular body part by id?
+## How to get a particular body part by RadLex ID, SNOMED, or another code?
 
 To get a body part by id, you need to use the `get` function.
 
 ```typescript
-const index = new BodyPartIndex();
+const index = new BodyPartIndex( [ {localCode: {code:'THX1138', system: 'LOCAL'}, radlexId: 'RID294'}}]);
 const bodyPart = index.get('RID294');
+const bodyPart2 = index.get('265256');
+const bodyPart3 = index.get('THX1138');
 ```
 
 This function returns a `BodyPart` object.
