@@ -83,13 +83,14 @@ const bodyParts = index.search('adnexa');
 
 ## What can you get from a `BodyPart`?
 ```typescript
+const index = new BodyPartIndex();
 const bodyPart = index.get('RID294');
-bodyPart?.getDescription()  // "uterine adnexa"
-bodyPart?.getSexSpecific() // "Female"
-bodyPart?.getSynonyms()  // ["adnexa"]
-bodyPart?.getContainedBy()  // BodyPart object; RID2507, pelvis
-bodyPart?.getPartOf()  // BodyPart object; RID270, female genital system
-bodyPart?.getCodes()  // Array of Codes; [ {"system": "SNOMED", "code": "53065001"}, ... ]
+bodyPart?.getDescription(); // "uterine adnexa"
+bodyPart?.getSexSpecific(); // "Female"
+bodyPart?.getSynonyms(); // ["adnexa"]
+bodyPart?.getContainedBy(); // BodyPart object; RID2507, pelvis
+bodyPart?.getPartOf(); // BodyPart object; RID270, female genital system
+bodyPart?.getCodes(); // Array of Codes; [ {"system": "SNOMED", "code": "53065001"}, ... ]
 ```
 ## How do deal with sided body parts?
 
