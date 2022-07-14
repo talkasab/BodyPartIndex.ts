@@ -76,16 +76,22 @@ const bodyParts = index.search('adnexa');
 ## What can you get from a `BodyPart`?
 ```typescript
 	const bodyPart = index.get('RID294');
-	bodyPart?.description				// "uterine adnexa"
-	bodyPart?.sexSpecific				// "Female"
-	bodyPart?.synonyms					// ["adnexa"]
-	bodyPart?.getContainedBy()			// BodyPart object; RID2507, pelvis
-	bodyPart?.getPartOf()				// BodyPart object; RID270, female genital system
-	bodyPart?.getCodes()				// Array of Codes; [ {"system": "SNOMED", "code": "53065001"}, ... ]
-	const right = bodyPart?.getRight()	// BodyPart object; RID294_RID5825, right uterine adnexa
-	const left  = bodyPart?.getLeft()   // BodyPart object; RID294_RID5824, left uterine adnexa
-	bodyPart === right.getUnsided()     // true
-	right === left.getRight()           // true
+	bodyPart?.description  // "uterine adnexa"
+	bodyPart?.sexSpecific // "Female"
+	bodyPart?.synonyms  // ["adnexa"]
+	bodyPart?.getContainedBy()  // BodyPart object; RID2507, pelvis
+	bodyPart?.getPartOf()  // BodyPart object; RID270, female genital system
+	bodyPart?.getCodes()  // Array of Codes; [ {"system": "SNOMED", "code": "53065001"}, ... ]
+```
+## How do deal with sided body parts?
+```typescript
+	const bodyPart = index.get('RID294'); // uterine adnexa (side not specified)
+	// From the unsided version, get the right- and left-sided versions
+	const right = bodyPart?.getRight()  // BodyPart object; RID294_RID5825, right uterine adnexa
+	const left  = bodyPart?.getLeft()  // BodyPart object; RID294_RID5824, left uterine adnexa
+	// From either of the sided versions, can get back to the unsided or to the other side
+	bodyPart === right.getUnsided()  // true
+	right === left.getRight()  // true
 ```
 
 ## How to determine if one body part is contained by another?
