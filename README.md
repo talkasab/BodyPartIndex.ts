@@ -84,6 +84,9 @@ const bodyParts = index.search('adnexa');
 	bodyPart?.getCodes()  // Array of Codes; [ {"system": "SNOMED", "code": "53065001"}, ... ]
 ```
 ## How do deal with sided body parts?
+
+For cases where the body part is sided, the index contains three versions: an unsided version, a left-sided version, and a right-sided version. All of these are aware of each other.
+
 ```typescript
 	const bodyPart = index.get('RID294'); // uterine adnexa (side not specified)
 	// From the unsided version, get the right- and left-sided versions
