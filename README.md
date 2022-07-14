@@ -97,13 +97,14 @@ bodyPart?.getCodes(); // Array of Codes; [ {"system": "SNOMED", "code": "5306500
 For cases where the body part is sided, the index contains three versions: an unsided version, a left-sided version, and a right-sided version. All of these are aware of each other.
 
 ```typescript
-	const bodyPart = index.get('RID294'); // uterine adnexa (side not specified)
-	// From the unsided version, get the right- and left-sided versions
-	const right = bodyPart?.getRight()  // BodyPart object; RID294_RID5825, right uterine adnexa
-	const left  = bodyPart?.getLeft()  // BodyPart object; RID294_RID5824, left uterine adnexa
-	// From either of the sided versions, can get back to the unsided or to the other side
-	bodyPart === right.getUnsided()  // true
-	right === left.getRight()  // true
+const index = new BodyPartIndex();
+const bodyPart = index.get('RID294'); // uterine adnexa (side not specified)
+// From the unsided version, get the right- and left-sided versions
+const right = bodyPart?.getRight(); // BodyPart object; RID294_RID5825, right uterine adnexa
+const left = bodyPart?.getLeft(); // BodyPart object; RID294_RID5824, left uterine adnexa
+// From either of the sided versions, can get back to the unsided or to the other side
+bodyPart?.isEqual(right?.getUnsided()); // true
+right?.isEqual(left?.getRight()); // true
 ```
 
 ## How to determine if one body part is contained by another?

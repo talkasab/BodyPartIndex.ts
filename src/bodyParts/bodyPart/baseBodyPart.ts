@@ -124,5 +124,13 @@ export abstract class BaseBodyPart {
 
         return codes;
     }
+
+    /**
+	 * Returns if current BodyPart is equal to another one.
+	 * @param {BodyPart | null | undefined} bodyPart - The body part.
+	 */
+    public isEqual (bodyPart: BodyPart | null | undefined): boolean {
+        return JSON.stringify(this.data) === JSON.stringify(bodyPart?.getData());
+    }
 		
 }
