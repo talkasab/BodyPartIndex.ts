@@ -49,25 +49,17 @@ const index = new BodyPartIndex({
 
 ## How to get a particular body part by RadLex ID, SNOMED, or another code?
 
-To get a body part by id, you need to use the `get` function.
+To get a body part by id or any code (include local codes), you need to use the `get` function.
 
 ```typescript
 const index = new BodyPartIndex( [ {localCode: {code:'THX1138', system: 'LOCAL'}, radlexId: 'RID294'}}]);
 const bodyPart = index.get('RID294');
-const bodyPart2 = index.get('265256');
-const bodyPart3 = index.get('THX1138');
+const bodyPart2 = index.get('265256');  // FMA code
+const bodyPart3 = index.get('THX1138'); // Local code
 ```
 
 This function returns a `BodyPart` object.
 
-## How to get a particular body part by code?
-
-The `get` function also works with codes (including local ones).
-
-```typescript
-const index = new BodyPartIndex();
-const bodyPart = index.get('265256');
-```
 ## How to search for body parts based on names or synonyms?
 
 The `search` function will return all the BodyParts that match a specific search value.
