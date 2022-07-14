@@ -119,6 +119,18 @@ describe('BaseBodyPart', () => {
         expect(bodyPart.getUnsidedId()).toBe(bodyPart1.unsidedId);
     });
 
+    it('returns the correct description value', () => {
+        expect(bodyPart.getDescription()).toBe(bodyPart1.description);
+    });
+
+    it('returns the correct synonyms value', () => {
+        expect(bodyPart.getSynonyms()).toBe(bodyPart1.synonyms);
+    });
+
+    it('returns the correct sexSpecific value', () => {
+        expect(bodyPart.getSexSpecific()).toBe(bodyPart1.sexSpecific);
+    });
+
     it('returns the correct unsidedId BodyPart', () => {
         expect(bodyPart.getUnsided()).toEqual(new BodyPart(bodyPartUnsided));
     });

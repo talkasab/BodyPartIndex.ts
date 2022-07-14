@@ -1,4 +1,4 @@
-import { IBodyPart } from 'src/bodyParts/interfaces/IBodyPart';
+import { IBodyPart, SexSpecific } from 'src/bodyParts/interfaces/IBodyPart';
 import { getBodyPartById } from 'src/bodyParts/utils/bodyPart';
 import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
 import { Code } from 'src/bodyParts/bodyPart/code';
@@ -18,6 +18,27 @@ export abstract class BaseBodyPart {
 	 */
     public getData (): IBodyPart {
         return this.data;
+    }
+
+    /**
+	 * Returns the BodyPart description field.
+	 */
+    public getDescription (): string {
+        return this.data.description;
+    }
+
+    /**
+	 * Returns the BodyPart synonyms field.
+	 */
+    public getSynonyms (): string[] | undefined {
+        return this.data.synonyms;
+    }
+
+    /**
+	 * Returns the BodyPart sex specific field.
+	 */
+    public getSexSpecific (): SexSpecific | undefined {
+        return this.data.sexSpecific;
     }
 
     /**
