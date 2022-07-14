@@ -8,7 +8,7 @@ Provides data and simple libraries for manipulating a standard list of anatomic 
 npm i path-to-library
 ```
 
-# BodyPartIndex (Scenarios)
+# `BodyPartIndex` (Scenarios)
 
 ## How to open the library?
 
@@ -52,7 +52,9 @@ const index = new BodyPartIndex({
 To get a body part by id or any code (include local codes), you need to use the `get` function.
 
 ```typescript
-const index = new BodyPartIndex( [ {localCode: {code:'THX1138', system: 'LOCAL'}, radlexId: 'RID294'}}]);
+const index = new BodyPartIndex( [ 
+	{ localCode: {code:'THX1138', system: 'LOCAL'}, radlexId: 'RID294'}
+] );
 const bodyPart = index.get('RID294');
 const bodyPart2 = index.get('265256');  // FMA code
 const bodyPart3 = index.get('THX1138'); // Local code
@@ -69,7 +71,22 @@ const index = new BodyPartIndex();
 const bodyParts = index.search('adnexa');
 ```
 
-# BodyPart (Scenarios)
+# `BodyPart` (Scenarios)
+
+## What can you get from a `BodyPart`?
+```typescript
+	const bodyPart = index.get('RID294');
+	bodyPart?.description				// "uterine adnexa"
+	bodyPart?.sexSpecific				// "Female"
+	bodyPart?.synonyms					// ["adnexa"]
+	bodyPart?.getContainedBy()			// BodyPart object; RID2507, pelvis
+	bodyPart?.getPartOf()				// BodyPart object; RID270, female genital system
+	bodyPart?.getCodes()				// Array of Codes; [ {"system": "SNOMED", "code": "53065001"}, ... ]
+	const right = bodyPart?.getRight()	// BodyPart object; RID294_RID5825, right uterine adnexa
+	const left  = bodyPart?.getLeft()   // BodyPart object; RID294_RID5824, left uterine adnexa
+	bodyPart === right.getUnsided()     // true
+	right === left.getRight()           // true
+```
 
 ## How to determine if one body part is contained by another?
 
