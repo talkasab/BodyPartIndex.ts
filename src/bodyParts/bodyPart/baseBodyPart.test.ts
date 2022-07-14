@@ -135,6 +135,15 @@ describe('BaseBodyPart', () => {
         expect(bodyPart.getUnsided()).toEqual(new BodyPart(bodyPartUnsided));
     });
 
+
+    it('returns if bodyPart is equal to another one', () => {
+        expect(bodyPart.isEqual(new BodyPart(bodyPart1))).toEqual(true);
+    });
+
+    it('returns if bodyPart is not-equal to another one', () => {
+        expect(bodyPart.isEqual(null)).toEqual(false);
+    });
+
     it('returns the correct codes', () => {
         expect(bodyPart.getCodes()).toEqual([
             new Code(code1),
