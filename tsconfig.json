@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "outDir": "./dist",
+        "sourceMap": true,
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "lib": [
+            "es2018",
+            "dom"
+        ],
+		"types": [
+            "jest",
+			"node"
+        ],
+        "strict": true,
+        "allowSyntheticDefaultImports": true,
+        "strictNullChecks": true,
+        "noImplicitReturns": true,
+        "allowUnreachableCode": false,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strictFunctionTypes": true,
+        "alwaysStrict": true,
+        "noImplicitThis": true,
+        "noImplicitAny": true,
+		"resolveJsonModule": true,
+		"paths": {
+			"*": ["*"]
+		},
+    },
+    "include": [
+        "src/**/*"
+    ]
+}

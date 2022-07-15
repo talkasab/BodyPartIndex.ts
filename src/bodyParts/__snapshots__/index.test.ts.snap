@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`setUpConfiguration() matches the BODY_PARTS object 1`] = `
+Object {
+  "codes": Object {
+    "78320081": Array [
+      "RID901",
+    ],
+    "78320082": Array [
+      "RID902",
+    ],
+    "78320083": Array [
+      "RID903",
+    ],
+    "78320085": Array [
+      "RID905",
+    ],
+    "AAABBBCC": Array [
+      "RID901",
+    ],
+  },
+  "containedAncestors": Object {
+    "RID901": "RID901",
+    "RID902": "RID901",
+    "RID903": "RID901",
+    "RID904": "RID903",
+    "RID905": "RID904",
+  },
+  "containedChildren": Object {
+    "RID901": Array [
+      "RID902",
+      "RID903",
+    ],
+    "RID903": Array [
+      "RID904",
+    ],
+    "RID904": Array [
+      "RID905",
+    ],
+  },
+  "map": Object {
+    "RID901": Object {
+      "codes": Array [
+        Object {
+          "code": "78320081",
+          "system": "SNOMED",
+        },
+        Object {
+          "code": "AAABBBCC",
+          "system": "LOCAL",
+        },
+      ],
+      "containedById": "RID901",
+      "description": "hand",
+      "partOfId": "RID902",
+      "radlexId": "RID901",
+    },
+    "RID902": Object {
+      "codes": Array [
+        Object {
+          "code": "78320082",
+          "system": "SNOMED",
+        },
+      ],
+      "containedById": "RID901",
+      "description": "feet",
+      "radlexId": "RID902",
+    },
+    "RID903": Object {
+      "codes": Array [
+        Object {
+          "code": "78320083",
+          "system": "SNOMED",
+        },
+      ],
+      "containedById": "RID901",
+      "description": "leg",
+      "radlexId": "RID903",
+      "synonyms": Array [
+        "feet",
+      ],
+    },
+    "RID904": Object {
+      "containedById": "RID903",
+      "description": "eye",
+      "partOfId": "RID902",
+      "radlexId": "RID904",
+      "synonyms": Array [
+        "aaa",
+        "ccc",
+      ],
+    },
+    "RID905": Object {
+      "codes": Array [
+        Object {
+          "code": "78320085",
+          "system": "SNOMED",
+        },
+      ],
+      "containedById": "RID904",
+      "description": "finger",
+      "partOfId": "RID901",
+      "radlexId": "RID905",
+    },
+  },
+  "partOfAncestors": Object {
+    "RID901": "RID902",
+    "RID904": "RID902",
+    "RID905": "RID901",
+  },
+  "partOfChildren": Object {
+    "RID901": Array [
+      "RID905",
+    ],
+    "RID902": Array [
+      "RID901",
+      "RID904",
+    ],
+  },
+  "version": "2.0.0",
+}
+`;

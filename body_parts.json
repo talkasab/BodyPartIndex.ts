@@ -1,5 +1,5 @@
 {
-  "$version": "DEV2022-04-25T18:28:26.959Z",
+  "$version": "DEV2022-07-07T21:16:05.533Z",
   "$schema": "body_parts_schema.json",
   "bodyParts": [
     {
@@ -1202,7 +1202,7 @@
     {
       "radlexId": "RID154",
       "description": "cecum",
-      "containedById": "RID56",
+      "containedById": "RID410",
       "partOfId": "RID152",
       "synonyms": [
         "caecum",
@@ -1517,7 +1517,7 @@
     {
       "radlexId": "RID81",
       "description": "falciform ligament",
-      "containedById": "RID56",
+      "containedById": "RID410",
       "synonyms": [
         "falciform ligament of liver",
         "ligamentum falciforme hepatis",
@@ -1601,7 +1601,7 @@
     {
       "radlexId": "RID187",
       "description": "gallbladder",
-      "containedById": "RID431",
+      "containedById": "RID397",
       "partOfId": "RID33652",
       "synonyms": [
         "gall bladder",
@@ -1640,7 +1640,7 @@
     {
       "radlexId": "RID430",
       "description": "greater omentum",
-      "containedById": "RID56",
+      "containedById": "RID410",
       "codes": [
         {
           "system": "SNOMED",
@@ -1948,12 +1948,9 @@
       "containedById": "RID431",
       "partOfId": "RID152",
       "synonyms": [
-        "flexura coli dextra",
-        "hepatic flexure",
-        "flexura coli hepatica",
-        "flexura coli heaptica",
-        "flexura coli heaptica",
-        "flexura coli hepatica"
+        "large bowel",
+        "intestinum crassum",
+        "intestinum crassum"
       ],
       "codes": [
         {
@@ -1969,7 +1966,7 @@
     {
       "radlexId": "RID1179",
       "description": "hepatic vein",
-      "containedById": "RID56",
+      "containedById": "RID58",
       "codes": [
         {
           "system": "SNOMED",
@@ -1980,7 +1977,7 @@
     {
       "radlexId": "RID153",
       "description": "ileocecal valve",
-      "containedById": "RID56",
+      "containedById": "RID410",
       "partOfId": "RID94",
       "codes": [
         {
@@ -1992,7 +1989,7 @@
     {
       "radlexId": "RID150",
       "description": "ileum",
-      "containedById": "RID56",
+      "containedById": "RID410",
       "partOfId": "RID132",
       "codes": [
         {
@@ -2071,7 +2068,7 @@
     {
       "radlexId": "RID148",
       "description": "jejunum",
-      "containedById": "RID56",
+      "containedById": "RID410",
       "partOfId": "RID132",
       "codes": [
         {
@@ -2189,7 +2186,7 @@
     {
       "radlexId": "RID193",
       "description": "left hepatic duct",
-      "containedById": "RID1243",
+      "containedById": "RID56",
       "partOfId": "RID33652",
       "codes": [
         {
@@ -2224,7 +2221,7 @@
     {
       "radlexId": "RID908",
       "description": "left gastric artery",
-      "containedById": "RID1243",
+      "containedById": "RID56",
       "synonyms": [
         "arteria gastrica sinistra",
         "arteria gastrica sinistra"
@@ -2243,7 +2240,7 @@
     {
       "radlexId": "RID916",
       "description": "left hepatic artery",
-      "containedById": "RID1243",
+      "containedById": "RID56",
       "synonyms": [
         "left branch of hepatic artery",
         "ramus sinister (Arteria hepatica propria)",
@@ -2366,7 +2363,7 @@
     {
       "radlexId": "RID1392",
       "description": "left ventricle",
-      "containedById": "RID1243",
+      "containedById": "RID1385",
       "partOfId": "RID1385",
       "codes": [
         {
@@ -2378,7 +2375,7 @@
     {
       "radlexId": "RID1333",
       "description": "lingula",
-      "containedById": "RID1243",
+      "containedById": "RID1326",
       "partOfId": "RID1327",
       "codes": [
         {
@@ -2416,25 +2413,6 @@
         {
           "system": "SNOMED",
           "code": "266005"
-        }
-      ]
-    },
-    {
-      "radlexId": "RID58",
-      "description": "liver",
-      "containedById": "RID56",
-      "synonyms": [
-        "hepar",
-        "Leber"
-      ],
-      "codes": [
-        {
-          "system": "FMA",
-          "code": "7197"
-        },
-        {
-          "system": "SNOMED",
-          "code": "10200004"
         }
       ]
     },
@@ -2485,7 +2463,7 @@
     {
       "radlexId": "RID2476",
       "description": "manubrium",
-      "containedById": "RID1243",
+      "containedById": "RID29859",
       "partOfId": "RID2473",
       "codes": [
         {
@@ -2511,7 +2489,7 @@
     {
       "radlexId": "RID1310",
       "description": "middle lobe of lung",
-      "containedById": "RID1243",
+      "containedById": "RID1302",
       "partOfId": "RID1302",
       "synonyms": [
         "middle lobe of right lung",
@@ -2620,7 +2598,7 @@
     {
       "radlexId": "RID170",
       "description": "pancreas",
-      "containedById": "RID56",
+      "containedById": "RID431",
       "codes": [
         {
           "system": "SNOMED",
@@ -2691,7 +2669,7 @@
     {
       "radlexId": "RID176",
       "description": "pancreatic duct",
-      "containedById": "RID56",
+      "containedById": "RID170",
       "synonyms": [
         "DP",
         "Ductus Wirsungianus"
@@ -2743,6 +2721,25 @@
       ]
     },
     {
+      "radlexId": "RID397",
+      "description": "peritoneal cavity",
+      "containedById": "RID56",
+      "codes": [
+        {
+          "system": "FMA",
+          "code": "14704"
+        },
+        {
+          "system": "SNOMED",
+          "code": "83670000"
+        },
+        {
+          "system": "UMLS",
+          "code": "C0031138"
+        }
+      ]
+    },
+    {
       "radlexId": "RID410",
       "description": "peritoneum",
       "containedById": "RID56",
@@ -2777,6 +2774,27 @@
         {
           "system": "SNOMED",
           "code": "18112008"
+        }
+      ]
+    },
+    {
+      "radlexId": "RID343",
+      "description": "prostate",
+      "containedById": "RID2507",
+      "sexSpecific": "Male",
+      "synonyms": [
+        "prostata",
+        "prostata (Glandula prostatica)",
+        "prostata"
+      ],
+      "codes": [
+        {
+          "system": "SNOMED",
+          "code": "41216001"
+        },
+        {
+          "system": "MESH",
+          "code": "A10.336.707"
         }
       ]
     },
@@ -2837,7 +2855,7 @@
     {
       "radlexId": "RID122",
       "description": "pylorus",
-      "containedById": "RID56",
+      "containedById": "RID410",
       "partOfId": "RID114",
       "synonyms": [
         "pyloric part of stomach",
@@ -2847,6 +2865,30 @@
         {
           "system": "SNOMED",
           "code": "280119005"
+        }
+      ]
+    },
+    {
+      "radlexId": "RID163",
+      "description": "rectum",
+      "containedById": "RID2507",
+      "partOfId": "RID152",
+      "codes": [
+        {
+          "system": "FMA",
+          "code": "14751"
+        },
+        {
+          "system": "SNOMED",
+          "code": "34402009"
+        },
+        {
+          "system": "MESH",
+          "code": "A03.556.124.526.767"
+        },
+        {
+          "system": "UMLS",
+          "code": "C0035065"
         }
       ]
     },
@@ -2957,6 +2999,26 @@
         {
           "system": "SNOMED",
           "code": "73829009"
+        }
+      ]
+    },
+    {
+      "radlexId": "RID194",
+      "description": "right hepatic duct",
+      "containedById": "RID56",
+      "partOfId": "RID33652",
+      "codes": [
+        {
+          "system": "FMA",
+          "code": "14669"
+        },
+        {
+          "system": "SNOMED",
+          "code": "78000005"
+        },
+        {
+          "system": "UMLS",
+          "code": "C0227557"
         }
       ]
     },
@@ -3171,6 +3233,26 @@
       ]
     },
     {
+      "radlexId": "RID162",
+      "description": "sigmoid colon",
+      "containedById": "RID2507",
+      "partOfId": "RID152",
+      "synonyms": [
+        "colon sigmoideum",
+        "colon sigmoideum"
+      ],
+      "codes": [
+        {
+          "system": "SNOMED",
+          "code": "60184004"
+        },
+        {
+          "system": "MESH",
+          "code": "A03.556.124.526.356.668"
+        }
+      ]
+    },
+    {
       "radlexId": "RID579",
       "description": "sinotubular junction",
       "containedById": "RID1384",
@@ -3218,7 +3300,7 @@
     {
       "radlexId": "RID86",
       "description": "spleen",
-      "containedById": "RID56",
+      "containedById": "RID410",
       "synonyms": [
         "lien",
         "splen",
@@ -3293,7 +3375,7 @@
     {
       "radlexId": "RID2473",
       "description": "sternum",
-      "containedById": "RID1243",
+      "containedById": "RID29859",
       "codes": [
         {
           "system": "SNOMED",
@@ -3304,7 +3386,7 @@
     {
       "radlexId": "RID114",
       "description": "stomach",
-      "containedById": "RID56",
+      "containedById": "RID410",
       "partOfId": "RID94",
       "synonyms": [
         "ventriculus",
@@ -3391,7 +3473,7 @@
     {
       "radlexId": "RID151",
       "description": "terminal ileum",
-      "containedById": "RID56",
+      "containedById": "RID410",
       "partOfId": "RID150",
       "synonyms": [
         "distal part of ileum"
@@ -3478,7 +3560,7 @@
     {
       "radlexId": "RID159",
       "description": "transverse colon",
-      "containedById": "RID56",
+      "containedById": "RID410",
       "partOfId": "RID152",
       "synonyms": [
         "colon transversum",
@@ -3509,7 +3591,7 @@
     {
       "radlexId": "RID1327",
       "description": "upper lobe of left lung",
-      "containedById": "RID1243",
+      "containedById": "RID1326",
       "partOfId": "RID1326",
       "synonyms": [
         "left upper lobe",
@@ -3525,7 +3607,7 @@
     {
       "radlexId": "RID1303",
       "description": "upper lobe of right lung",
-      "containedById": "RID1243",
+      "containedById": "RID1302",
       "partOfId": "RID1302",
       "synonyms": [
         "right upper lobe",
@@ -4051,7 +4133,7 @@
     {
       "radlexId": "RID147",
       "description": "ligament of Treitz",
-      "containedById": "RID56",
+      "containedById": "RID410",
       "codes": [
         {
           "system": "SNOMED",
@@ -4062,7 +4144,7 @@
     {
       "radlexId": "RID413",
       "description": "gastrohepatic ligament",
-      "containedById": "RID56",
+      "containedById": "RID410",
       "codes": [
         {
           "system": "SNOMED",
@@ -4073,7 +4155,7 @@
     {
       "radlexId": "RID417",
       "description": "gastrocolic ligament",
-      "containedById": "RID56",
+      "containedById": "RID410",
       "codes": [
         {
           "system": "SNOMED",
@@ -4084,7 +4166,7 @@
     {
       "radlexId": "RID415",
       "description": "hepatoduodenal ligament",
-      "containedById": "RID56",
+      "containedById": "RID410",
       "codes": [
         {
           "system": "SNOMED",
@@ -4095,7 +4177,7 @@
     {
       "radlexId": "RID33180",
       "description": "mesentery",
-      "containedById": "RID56",
+      "containedById": "RID410",
       "codes": [
         {
           "system": "SNOMED",
@@ -4227,7 +4309,7 @@
     {
       "radlexId": "RID2660",
       "description": "thigh",
-      "containedById": "RID2660",
+      "containedById": "RID2638",
       "leftId": "RID2660_RID5824",
       "rightId": "RID2660_RID5825",
       "codes": [
@@ -4248,7 +4330,7 @@
     {
       "radlexId": "RID2660_RID5824",
       "description": "left thigh",
-      "containedById": "RID2660_RID5824",
+      "containedById": "RID2638_RID5824",
       "unsidedId": "RID2660",
       "rightId": "RID2660_RID5825",
       "codes": [
@@ -4261,7 +4343,7 @@
     {
       "radlexId": "RID2660_RID5825",
       "description": "right thigh",
-      "containedById": "RID2660_RID5825",
+      "containedById": "RID2638_RID5825",
       "unsidedId": "RID2660",
       "leftId": "RID2660_RID5824",
       "codes": [
@@ -4274,7 +4356,7 @@
     {
       "radlexId": "RID2743",
       "description": "knee",
-      "containedById": "RID2743",
+      "containedById": "RID2638",
       "leftId": "RID49360",
       "rightId": "RID49359",
       "synonyms": [
@@ -4299,7 +4381,7 @@
     {
       "radlexId": "RID49359",
       "description": "right knee",
-      "containedById": "RID49359",
+      "containedById": "RID2638_RID5825",
       "unsidedId": "RID2743",
       "leftId": "RID49360",
       "codes": [
@@ -4316,7 +4398,7 @@
     {
       "radlexId": "RID49360",
       "description": "left knee",
-      "containedById": "RID49360",
+      "containedById": "RID2638_RID5824",
       "unsidedId": "RID2743",
       "rightId": "RID49359",
       "codes": [
@@ -4333,7 +4415,7 @@
     {
       "radlexId": "RID2869",
       "description": "leg",
-      "containedById": "RID2869",
+      "containedById": "RID2638",
       "leftId": "RID2869_RID5824",
       "rightId": "RID2869_RID5825",
       "synonyms": [
@@ -4357,7 +4439,7 @@
     {
       "radlexId": "RID2869_RID5824",
       "description": "left leg",
-      "containedById": "RID2869_RID5824",
+      "containedById": "RID2638_RID5824",
       "unsidedId": "RID2869",
       "rightId": "RID2869_RID5825",
       "codes": [
@@ -4370,7 +4452,7 @@
     {
       "radlexId": "RID2869_RID5825",
       "description": "right leg",
-      "containedById": "RID2869_RID5825",
+      "containedById": "RID2638_RID5825",
       "unsidedId": "RID2869",
       "leftId": "RID2869_RID5824",
       "codes": [
@@ -4383,7 +4465,7 @@
     {
       "radlexId": "RID28545",
       "description": "ankle",
-      "containedById": "RID28545",
+      "containedById": "RID2638",
       "leftId": "RID28545_RID5824",
       "rightId": "RID28545_RID5825",
       "codes": [
@@ -4408,7 +4490,7 @@
     {
       "radlexId": "RID28545_RID5824",
       "description": "left ankle",
-      "containedById": "RID28545_RID5824",
+      "containedById": "RID2638_RID5824",
       "unsidedId": "RID28545",
       "rightId": "RID28545_RID5825",
       "codes": [
@@ -4421,7 +4503,7 @@
     {
       "radlexId": "RID28545_RID5825",
       "description": "right ankle",
-      "containedById": "RID28545_RID5825",
+      "containedById": "RID2638_RID5825",
       "unsidedId": "RID28545",
       "leftId": "RID28545_RID5824",
       "codes": [
@@ -4434,7 +4516,7 @@
     {
       "radlexId": "RID28829",
       "description": "foot",
-      "containedById": "RID28829",
+      "containedById": "RID2638",
       "leftId": "RID28829_RID5824",
       "rightId": "RID28829_RID5825",
       "codes": [
@@ -4455,7 +4537,7 @@
     {
       "radlexId": "RID28829_RID5824",
       "description": "left foot",
-      "containedById": "RID28829_RID5824",
+      "containedById": "RID2638_RID5824",
       "unsidedId": "RID28829",
       "rightId": "RID28829_RID5825",
       "codes": [
@@ -4468,7 +4550,7 @@
     {
       "radlexId": "RID28829_RID5825",
       "description": "right foot",
-      "containedById": "RID28829_RID5825",
+      "containedById": "RID2638_RID5825",
       "unsidedId": "RID28829",
       "leftId": "RID28829_RID5824",
       "codes": [
@@ -12831,7 +12913,7 @@
     {
       "radlexId": "RID39518",
       "description": "shoulder",
-      "containedById": "RID39518",
+      "containedById": "RID1850",
       "leftId": "RID39518_RID5824",
       "rightId": "RID39518_RID5825",
       "codes": [
@@ -12852,7 +12934,7 @@
     {
       "radlexId": "RID39518_RID5824",
       "description": "left shoulder",
-      "containedById": "RID39518_RID5824",
+      "containedById": "RID1850_RID5824",
       "unsidedId": "RID39518",
       "rightId": "RID39518_RID5825",
       "codes": [
@@ -12865,7 +12947,7 @@
     {
       "radlexId": "RID39518_RID5825",
       "description": "right shoulder",
-      "containedById": "RID39518_RID5825",
+      "containedById": "RID1850_RID5825",
       "unsidedId": "RID39518",
       "leftId": "RID39518_RID5824",
       "codes": [
@@ -12878,7 +12960,7 @@
     {
       "radlexId": "RID1968",
       "description": "arm",
-      "containedById": "RID1968",
+      "containedById": "RID1850",
       "leftId": "RID1968_RID5824",
       "rightId": "RID1968_RID5825",
       "synonyms": [
@@ -12902,7 +12984,7 @@
     {
       "radlexId": "RID1968_RID5824",
       "description": "left arm",
-      "containedById": "RID1968_RID5824",
+      "containedById": "RID1850_RID5824",
       "unsidedId": "RID1968",
       "rightId": "RID1968_RID5825",
       "codes": [
@@ -12915,7 +12997,7 @@
     {
       "radlexId": "RID1968_RID5825",
       "description": "right arm",
-      "containedById": "RID1968_RID5825",
+      "containedById": "RID1850_RID5825",
       "unsidedId": "RID1968",
       "leftId": "RID1968_RID5824",
       "codes": [
@@ -12928,7 +13010,7 @@
     {
       "radlexId": "RID2010",
       "description": "elbow",
-      "containedById": "RID2010",
+      "containedById": "RID1850",
       "leftId": "RID2010_RID5824",
       "rightId": "RID2010_RID5825",
       "codes": [
@@ -12949,7 +13031,7 @@
     {
       "radlexId": "RID2010_RID5824",
       "description": "left elbow",
-      "containedById": "RID2010_RID5824",
+      "containedById": "RID1850_RID5824",
       "unsidedId": "RID2010",
       "rightId": "RID2010_RID5825",
       "codes": [
@@ -12962,7 +13044,7 @@
     {
       "radlexId": "RID2010_RID5825",
       "description": "right elbow",
-      "containedById": "RID2010_RID5825",
+      "containedById": "RID1850_RID5825",
       "unsidedId": "RID2010",
       "leftId": "RID2010_RID5824",
       "codes": [
@@ -12975,7 +13057,7 @@
     {
       "radlexId": "RID2107",
       "description": "forearm",
-      "containedById": "RID2107",
+      "containedById": "RID1850",
       "leftId": "RID2107_RID5824",
       "rightId": "RID2107_RID5825",
       "codes": [
@@ -12996,7 +13078,7 @@
     {
       "radlexId": "RID2107_RID5824",
       "description": "left forearm",
-      "containedById": "RID2107_RID5824",
+      "containedById": "RID1850_RID5824",
       "unsidedId": "RID2107",
       "rightId": "RID2107_RID5825",
       "codes": [
@@ -13009,7 +13091,7 @@
     {
       "radlexId": "RID2107_RID5825",
       "description": "right forearm",
-      "containedById": "RID2107_RID5825",
+      "containedById": "RID1850_RID5825",
       "unsidedId": "RID2107",
       "leftId": "RID2107_RID5824",
       "codes": [
@@ -13022,7 +13104,7 @@
     {
       "radlexId": "RID2177",
       "description": "wrist",
-      "containedById": "RID2177",
+      "containedById": "RID1850",
       "leftId": "RID2177_RID5824",
       "rightId": "RID2177_RID5825",
       "synonyms": [
@@ -13050,7 +13132,7 @@
     {
       "radlexId": "RID2177_RID5824",
       "description": "left wrist",
-      "containedById": "RID2177_RID5824",
+      "containedById": "RID1850_RID5824",
       "unsidedId": "RID2177",
       "rightId": "RID2177_RID5825",
       "codes": [
@@ -13063,7 +13145,7 @@
     {
       "radlexId": "RID2177_RID5825",
       "description": "right wrist",
-      "containedById": "RID2177_RID5825",
+      "containedById": "RID1850_RID5825",
       "unsidedId": "RID2177",
       "leftId": "RID2177_RID5824",
       "codes": [
@@ -13076,7 +13158,7 @@
     {
       "radlexId": "RID2318",
       "description": "hand",
-      "containedById": "RID2318",
+      "containedById": "RID1850",
       "leftId": "RID2318_RID5824",
       "rightId": "RID2318_RID5825",
       "codes": [
@@ -13097,7 +13179,7 @@
     {
       "radlexId": "RID2318_RID5824",
       "description": "left hand",
-      "containedById": "RID2318_RID5824",
+      "containedById": "RID1850_RID5824",
       "unsidedId": "RID2318",
       "rightId": "RID2318_RID5825",
       "codes": [
@@ -13110,7 +13192,7 @@
     {
       "radlexId": "RID2318_RID5825",
       "description": "right hand",
-      "containedById": "RID2318_RID5825",
+      "containedById": "RID1850_RID5825",
       "unsidedId": "RID2318",
       "leftId": "RID2318_RID5824",
       "codes": [
@@ -21741,7 +21823,7 @@
     {
       "radlexId": "RID836",
       "description": "superior epigastric artery",
-      "containedById": "RID56",
+      "containedById": "RID30008",
       "leftId": "RID44830",
       "rightId": "RID44829",
       "partOfId": "RID49921",
@@ -21766,7 +21848,7 @@
     {
       "radlexId": "RID44829",
       "description": "right superior epigastric artery",
-      "containedById": "RID56",
+      "containedById": "RID30008",
       "unsidedId": "RID836",
       "leftId": "RID44830",
       "partOfId": "RID49921",
@@ -21784,7 +21866,7 @@
     {
       "radlexId": "RID44830",
       "description": "left superior epigastric artery",
-      "containedById": "RID56",
+      "containedById": "RID30008",
       "unsidedId": "RID836",
       "rightId": "RID44829",
       "partOfId": "RID49921",
@@ -21802,7 +21884,7 @@
     {
       "radlexId": "RID13091",
       "description": "inferior epigastric artery",
-      "containedById": "RID56",
+      "containedById": "RID30008",
       "leftId": "RID13091_RID5824",
       "rightId": "RID13091_RID5825",
       "partOfId": "RID50378",
@@ -21824,7 +21906,7 @@
     {
       "radlexId": "RID13091_RID5824",
       "description": "left inferior epigastric artery",
-      "containedById": "RID56",
+      "containedById": "RID30008",
       "unsidedId": "RID13091",
       "rightId": "RID13091_RID5825",
       "partOfId": "RID50378"
@@ -21832,7 +21914,7 @@
     {
       "radlexId": "RID13091_RID5825",
       "description": "right inferior epigastric artery",
-      "containedById": "RID56",
+      "containedById": "RID30008",
       "unsidedId": "RID13091",
       "leftId": "RID13091_RID5824",
       "partOfId": "RID50378"
@@ -21877,32 +21959,9 @@
       ]
     },
     {
-      "radlexId": "RID397",
-      "description": "peritoneal cavity",
-      "containedById": "RID410",
-      "codes": [
-        {
-          "system": "FMA",
-          "code": "14704"
-        },
-        {
-          "system": "SNOMED",
-          "code": "83670000"
-        },
-        {
-          "system": "MESH",
-          "code": "A01.923.047.025.600.678"
-        },
-        {
-          "system": "UMLS",
-          "code": "C1704247"
-        }
-      ]
-    },
-    {
       "radlexId": "RID49533",
       "description": "celiac nerve plexus",
-      "containedById": "RID56",
+      "containedById": "RID431",
       "partOfId": "RID16280",
       "synonyms": [
         "celiac plexus"
@@ -22147,7 +22206,7 @@
     {
       "radlexId": "RID31610",
       "description": "rectus abdominis",
-      "containedById": "RID56",
+      "containedById": "RID30008",
       "leftId": "RID31612",
       "rightId": "RID31611",
       "partOfId": "RID32809",
@@ -22177,7 +22236,7 @@
     {
       "radlexId": "RID31611",
       "description": "right rectus abdominis",
-      "containedById": "RID56",
+      "containedById": "RID30008",
       "unsidedId": "RID31610",
       "leftId": "RID31612",
       "partOfId": "RID32809",
@@ -22195,7 +22254,7 @@
     {
       "radlexId": "RID31612",
       "description": "left rectus abdominis",
-      "containedById": "RID56",
+      "containedById": "RID30008",
       "unsidedId": "RID31610",
       "rightId": "RID31611",
       "partOfId": "RID32809",
@@ -22213,7 +22272,7 @@
     {
       "radlexId": "RID31607",
       "description": "quadratus lumborum",
-      "containedById": "RID431",
+      "containedById": "RID32817",
       "leftId": "RID31609",
       "rightId": "RID31608",
       "partOfId": "RID32808",
@@ -22235,7 +22294,7 @@
     {
       "radlexId": "RID31608",
       "description": "right quadratus lumborum",
-      "containedById": "RID431",
+      "containedById": "RID32817",
       "unsidedId": "RID31607",
       "leftId": "RID31609",
       "partOfId": "RID32808",
@@ -22253,7 +22312,7 @@
     {
       "radlexId": "RID31609",
       "description": "left quadratus lumborum",
-      "containedById": "RID431",
+      "containedById": "RID32817",
       "unsidedId": "RID31607",
       "rightId": "RID31608",
       "partOfId": "RID32808",
@@ -22271,7 +22330,7 @@
     {
       "radlexId": "RID2625",
       "description": "psoas major muscle",
-      "containedById": "RID431",
+      "containedById": "RID32817",
       "leftId": "RID32249",
       "rightId": "RID32248",
       "partOfId": "RID32808",
@@ -22297,7 +22356,7 @@
     {
       "radlexId": "RID32248",
       "description": "right psoas major",
-      "containedById": "RID431",
+      "containedById": "RID32817",
       "unsidedId": "RID2625",
       "leftId": "RID32249",
       "partOfId": "RID32808",
@@ -22315,7 +22374,7 @@
     {
       "radlexId": "RID32249",
       "description": "left psoas major",
-      "containedById": "RID431",
+      "containedById": "RID32817",
       "unsidedId": "RID2625",
       "rightId": "RID32248",
       "partOfId": "RID32808",
@@ -22333,7 +22392,7 @@
     {
       "radlexId": "RID2626",
       "description": "psoas minor muscle",
-      "containedById": "RID431",
+      "containedById": "RID32817",
       "leftId": "RID32251",
       "rightId": "RID32250",
       "partOfId": "RID32808",
@@ -22359,7 +22418,7 @@
     {
       "radlexId": "RID32250",
       "description": "right psoas minor",
-      "containedById": "RID431",
+      "containedById": "RID32817",
       "unsidedId": "RID2626",
       "leftId": "RID32251",
       "partOfId": "RID32808",
@@ -22377,7 +22436,7 @@
     {
       "radlexId": "RID32251",
       "description": "left psoas minor",
-      "containedById": "RID431",
+      "containedById": "RID32817",
       "unsidedId": "RID2626",
       "rightId": "RID32250",
       "partOfId": "RID32808",
@@ -23270,7 +23329,7 @@
     {
       "radlexId": "RID28591",
       "description": "set of ribs",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "partOfId": "RID1243",
       "synonyms": [
         "ribs"
@@ -23297,7 +23356,7 @@
     {
       "radlexId": "RID28591_RID6151",
       "description": "first rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "leftId": "RID28591_RID6151_RID5824",
       "rightId": "RID28591_RID6151_RID5825",
       "partOfId": "RID28591",
@@ -23322,7 +23381,7 @@
     {
       "radlexId": "RID28591_RID6151_RID5824",
       "description": "left first rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6151",
       "rightId": "RID28591_RID6151_RID5825",
       "partOfId": "RID28591"
@@ -23330,7 +23389,7 @@
     {
       "radlexId": "RID28591_RID6151_RID5825",
       "description": "right first rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6151",
       "leftId": "RID28591_RID6151_RID5824",
       "partOfId": "RID28591"
@@ -23338,7 +23397,7 @@
     {
       "radlexId": "RID28591_RID6152",
       "description": "second rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "leftId": "RID28591_RID6152_RID5824",
       "rightId": "RID28591_RID6152_RID5825",
       "partOfId": "RID28591",
@@ -23363,7 +23422,7 @@
     {
       "radlexId": "RID28591_RID6152_RID5824",
       "description": "left second rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6152",
       "rightId": "RID28591_RID6152_RID5825",
       "partOfId": "RID28591"
@@ -23371,7 +23430,7 @@
     {
       "radlexId": "RID28591_RID6152_RID5825",
       "description": "right second rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6152",
       "leftId": "RID28591_RID6152_RID5824",
       "partOfId": "RID28591"
@@ -23379,7 +23438,7 @@
     {
       "radlexId": "RID28591_RID6153",
       "description": "third rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "leftId": "RID28591_RID6153_RID5824",
       "rightId": "RID28591_RID6153_RID5825",
       "partOfId": "RID28591",
@@ -23404,7 +23463,7 @@
     {
       "radlexId": "RID28591_RID6153_RID5824",
       "description": "left third rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6153",
       "rightId": "RID28591_RID6153_RID5825",
       "partOfId": "RID28591"
@@ -23412,7 +23471,7 @@
     {
       "radlexId": "RID28591_RID6153_RID5825",
       "description": "right third rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6153",
       "leftId": "RID28591_RID6153_RID5824",
       "partOfId": "RID28591"
@@ -23420,7 +23479,7 @@
     {
       "radlexId": "RID28591_RID6154",
       "description": "fourth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "leftId": "RID28591_RID6154_RID5824",
       "rightId": "RID28591_RID6154_RID5825",
       "partOfId": "RID28591",
@@ -23445,7 +23504,7 @@
     {
       "radlexId": "RID28591_RID6154_RID5824",
       "description": "left fourth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6154",
       "rightId": "RID28591_RID6154_RID5825",
       "partOfId": "RID28591"
@@ -23453,7 +23512,7 @@
     {
       "radlexId": "RID28591_RID6154_RID5825",
       "description": "right fourth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6154",
       "leftId": "RID28591_RID6154_RID5824",
       "partOfId": "RID28591"
@@ -23461,7 +23520,7 @@
     {
       "radlexId": "RID28591_RID6155",
       "description": "fifth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "leftId": "RID28591_RID6155_RID5824",
       "rightId": "RID28591_RID6155_RID5825",
       "partOfId": "RID28591",
@@ -23486,7 +23545,7 @@
     {
       "radlexId": "RID28591_RID6155_RID5824",
       "description": "left fifth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6155",
       "rightId": "RID28591_RID6155_RID5825",
       "partOfId": "RID28591"
@@ -23494,7 +23553,7 @@
     {
       "radlexId": "RID28591_RID6155_RID5825",
       "description": "right fifth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6155",
       "leftId": "RID28591_RID6155_RID5824",
       "partOfId": "RID28591"
@@ -23502,7 +23561,7 @@
     {
       "radlexId": "RID28591_RID6156",
       "description": "sixth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "leftId": "RID28591_RID6156_RID5824",
       "rightId": "RID28591_RID6156_RID5825",
       "partOfId": "RID28591",
@@ -23527,7 +23586,7 @@
     {
       "radlexId": "RID28591_RID6156_RID5824",
       "description": "left sixth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6156",
       "rightId": "RID28591_RID6156_RID5825",
       "partOfId": "RID28591"
@@ -23535,7 +23594,7 @@
     {
       "radlexId": "RID28591_RID6156_RID5825",
       "description": "right sixth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6156",
       "leftId": "RID28591_RID6156_RID5824",
       "partOfId": "RID28591"
@@ -23543,7 +23602,7 @@
     {
       "radlexId": "RID28591_RID6157",
       "description": "seventh rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "leftId": "RID28591_RID6157_RID5824",
       "rightId": "RID28591_RID6157_RID5825",
       "partOfId": "RID28591",
@@ -23568,7 +23627,7 @@
     {
       "radlexId": "RID28591_RID6157_RID5824",
       "description": "left seventh rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6157",
       "rightId": "RID28591_RID6157_RID5825",
       "partOfId": "RID28591"
@@ -23576,7 +23635,7 @@
     {
       "radlexId": "RID28591_RID6157_RID5825",
       "description": "right seventh rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6157",
       "leftId": "RID28591_RID6157_RID5824",
       "partOfId": "RID28591"
@@ -23584,7 +23643,7 @@
     {
       "radlexId": "RID28591_RID6158",
       "description": "eighth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "leftId": "RID28591_RID6158_RID5824",
       "rightId": "RID28591_RID6158_RID5825",
       "partOfId": "RID28591",
@@ -23609,7 +23668,7 @@
     {
       "radlexId": "RID28591_RID6158_RID5824",
       "description": "left eighth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6158",
       "rightId": "RID28591_RID6158_RID5825",
       "partOfId": "RID28591"
@@ -23617,7 +23676,7 @@
     {
       "radlexId": "RID28591_RID6158_RID5825",
       "description": "right eighth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6158",
       "leftId": "RID28591_RID6158_RID5824",
       "partOfId": "RID28591"
@@ -23625,7 +23684,7 @@
     {
       "radlexId": "RID28591_RID6159",
       "description": "ninth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "leftId": "RID28591_RID6159_RID5824",
       "rightId": "RID28591_RID6159_RID5825",
       "partOfId": "RID28591",
@@ -23650,7 +23709,7 @@
     {
       "radlexId": "RID28591_RID6159_RID5824",
       "description": "left ninth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6159",
       "rightId": "RID28591_RID6159_RID5825",
       "partOfId": "RID28591"
@@ -23658,7 +23717,7 @@
     {
       "radlexId": "RID28591_RID6159_RID5825",
       "description": "right ninth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6159",
       "leftId": "RID28591_RID6159_RID5824",
       "partOfId": "RID28591"
@@ -23666,7 +23725,7 @@
     {
       "radlexId": "RID28591_RID6160",
       "description": "tenth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "leftId": "RID28591_RID6160_RID5824",
       "rightId": "RID28591_RID6160_RID5825",
       "partOfId": "RID28591",
@@ -23691,7 +23750,7 @@
     {
       "radlexId": "RID28591_RID6160_RID5824",
       "description": "left tenth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6160",
       "rightId": "RID28591_RID6160_RID5825",
       "partOfId": "RID28591"
@@ -23699,7 +23758,7 @@
     {
       "radlexId": "RID28591_RID6160_RID5825",
       "description": "right tenth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6160",
       "leftId": "RID28591_RID6160_RID5824",
       "partOfId": "RID28591"
@@ -23707,7 +23766,7 @@
     {
       "radlexId": "RID28591_RID6161",
       "description": "eleventh rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "leftId": "RID28591_RID6161_RID5824",
       "rightId": "RID28591_RID6161_RID5825",
       "partOfId": "RID28591",
@@ -23732,7 +23791,7 @@
     {
       "radlexId": "RID28591_RID6161_RID5824",
       "description": "left eleventh rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6161",
       "rightId": "RID28591_RID6161_RID5825",
       "partOfId": "RID28591"
@@ -23740,7 +23799,7 @@
     {
       "radlexId": "RID28591_RID6161_RID5825",
       "description": "right eleventh rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6161",
       "leftId": "RID28591_RID6161_RID5824",
       "partOfId": "RID28591"
@@ -23748,7 +23807,7 @@
     {
       "radlexId": "RID28591_RID6162",
       "description": "twelfth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "leftId": "RID28591_RID6162_RID5824",
       "rightId": "RID28591_RID6162_RID5825",
       "partOfId": "RID28591",
@@ -23773,7 +23832,7 @@
     {
       "radlexId": "RID28591_RID6162_RID5824",
       "description": "left twelfth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6162",
       "rightId": "RID28591_RID6162_RID5825",
       "partOfId": "RID28591"
@@ -23781,7 +23840,7 @@
     {
       "radlexId": "RID28591_RID6162_RID5825",
       "description": "right twelfth rib",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID28591_RID6162",
       "leftId": "RID28591_RID6162_RID5824",
       "partOfId": "RID28591"
@@ -24081,7 +24140,7 @@
     {
       "radlexId": "RID146",
       "description": "fourth part of duodenum",
-      "containedById": "RID431",
+      "containedById": "RID410",
       "partOfId": "RID134",
       "synonyms": [
         "ascending portion of duodenum"
@@ -24210,7 +24269,7 @@
     {
       "radlexId": "RID38289",
       "description": "middle colic vein",
-      "containedById": "RID410",
+      "containedById": "RID397",
       "partOfId": "RID50378",
       "synonyms": [
         "vena colica media"
@@ -24233,7 +24292,7 @@
     {
       "radlexId": "RID38291",
       "description": "ileocolic vein",
-      "containedById": "RID410",
+      "containedById": "RID397",
       "partOfId": "RID50378",
       "synonyms": [
         "vena ileocolica"
@@ -24256,7 +24315,7 @@
     {
       "radlexId": "RID38290",
       "description": "right colic vein",
-      "containedById": "RID410",
+      "containedById": "RID397",
       "partOfId": "RID50378",
       "synonyms": [
         "vena colica dextra"
@@ -24450,7 +24509,7 @@
     {
       "radlexId": "RID931",
       "description": "middle colic artery",
-      "containedById": "RID410",
+      "containedById": "RID397",
       "partOfId": "RID50378",
       "synonyms": [
         "arteria colica media"
@@ -24473,7 +24532,7 @@
     {
       "radlexId": "RID934",
       "description": "ileocolic artery",
-      "containedById": "RID410",
+      "containedById": "RID397",
       "partOfId": "RID50378",
       "synonyms": [
         "arteria ileocolica"
@@ -24496,7 +24555,7 @@
     {
       "radlexId": "RID940",
       "description": "left colic artery",
-      "containedById": "RID410",
+      "containedById": "RID397",
       "partOfId": "RID50378",
       "synonyms": [
         "arteria colica sinistra"
@@ -24519,7 +24578,7 @@
     {
       "radlexId": "RID929",
       "description": "right colic artery",
-      "containedById": "RID410",
+      "containedById": "RID397",
       "partOfId": "RID50378",
       "synonyms": [
         "arteria colica dextra"
@@ -24617,7 +24676,7 @@
     {
       "radlexId": "RID884",
       "description": "intercostal artery",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "partOfId": "RID49962",
       "codes": [
         {
@@ -24928,7 +24987,7 @@
     {
       "radlexId": "RID2493",
       "description": "pectoralis major muscle",
-      "containedById": "RID1243",
+      "containedById": "RID29859",
       "leftId": "RID43072",
       "rightId": "RID43071",
       "partOfId": "RID32755",
@@ -24953,7 +25012,7 @@
     {
       "radlexId": "RID43071",
       "description": "right pectoralis major",
-      "containedById": "RID1243",
+      "containedById": "RID29859",
       "unsidedId": "RID2493",
       "leftId": "RID43072",
       "partOfId": "RID32755",
@@ -24974,7 +25033,7 @@
     {
       "radlexId": "RID43072",
       "description": "left pectoralis major",
-      "containedById": "RID1243",
+      "containedById": "RID29859",
       "unsidedId": "RID2493",
       "rightId": "RID43071",
       "partOfId": "RID32755",
@@ -24995,7 +25054,7 @@
     {
       "radlexId": "RID2496",
       "description": "pectoralis minor muscle",
-      "containedById": "RID1243",
+      "containedById": "RID29859",
       "leftId": "RID43074",
       "rightId": "RID43073",
       "partOfId": "RID32755",
@@ -25020,7 +25079,7 @@
     {
       "radlexId": "RID43073",
       "description": "right pectoralis minor",
-      "containedById": "RID1243",
+      "containedById": "RID29859",
       "unsidedId": "RID2496",
       "leftId": "RID43074",
       "partOfId": "RID32755",
@@ -25041,7 +25100,7 @@
     {
       "radlexId": "RID43074",
       "description": "left pectoralis minor",
-      "containedById": "RID1243",
+      "containedById": "RID29859",
       "unsidedId": "RID2496",
       "rightId": "RID43073",
       "partOfId": "RID32755",
@@ -25062,7 +25121,7 @@
     {
       "radlexId": "RID2502",
       "description": "serratus anterior muscle",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "leftId": "RID43053",
       "rightId": "RID43052",
       "partOfId": "RID32755",
@@ -25088,7 +25147,7 @@
     {
       "radlexId": "RID43052",
       "description": "right serratus anterior",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID2502",
       "leftId": "RID43053",
       "partOfId": "RID32755",
@@ -25109,7 +25168,7 @@
     {
       "radlexId": "RID43053",
       "description": "left serratus anterior",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID2502",
       "rightId": "RID43052",
       "partOfId": "RID32755",
@@ -25130,7 +25189,7 @@
     {
       "radlexId": "RID2500",
       "description": "rhomboideus major muscle",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "leftId": "RID43055",
       "rightId": "RID43054",
       "partOfId": "RID32807",
@@ -25157,7 +25216,7 @@
     {
       "radlexId": "RID43054",
       "description": "right rhomboid major",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID2500",
       "leftId": "RID43055",
       "partOfId": "RID32807",
@@ -25183,7 +25242,7 @@
     {
       "radlexId": "RID43055",
       "description": "left rhomboid major",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID2500",
       "rightId": "RID43054",
       "partOfId": "RID32807",
@@ -25209,7 +25268,7 @@
     {
       "radlexId": "RID2501",
       "description": "rhomboideus minor muscle",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "leftId": "RID43057",
       "rightId": "RID43056",
       "partOfId": "RID32807",
@@ -25235,7 +25294,7 @@
     {
       "radlexId": "RID43056",
       "description": "right rhomboid minor",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID2501",
       "leftId": "RID43057",
       "partOfId": "RID32807",
@@ -25261,7 +25320,7 @@
     {
       "radlexId": "RID43057",
       "description": "left rhomboid minor",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID2501",
       "rightId": "RID43056",
       "partOfId": "RID32807",
@@ -25287,7 +25346,7 @@
     {
       "radlexId": "RID1937",
       "description": "trapezius muscle",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "leftId": "RID43046",
       "rightId": "RID43045",
       "partOfId": "RID32807",
@@ -25313,7 +25372,7 @@
     {
       "radlexId": "RID43045",
       "description": "right trapezius",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID1937",
       "leftId": "RID43046",
       "partOfId": "RID32807",
@@ -25334,7 +25393,7 @@
     {
       "radlexId": "RID43046",
       "description": "left trapezius",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID1937",
       "rightId": "RID43045",
       "partOfId": "RID32807",
@@ -25355,7 +25414,7 @@
     {
       "radlexId": "RID32769",
       "description": "set of intercostal muscles",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "leftId": "RID32771",
       "rightId": "RID32770",
       "partOfId": "RID32755",
@@ -25381,7 +25440,7 @@
     {
       "radlexId": "RID32770",
       "description": "set of right intercostal muscles",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID32769",
       "leftId": "RID32771",
       "partOfId": "RID32755",
@@ -25398,7 +25457,7 @@
     {
       "radlexId": "RID32771",
       "description": "set of left intercostal muscles",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID32769",
       "rightId": "RID32770",
       "partOfId": "RID32755",
@@ -25415,7 +25474,7 @@
     {
       "radlexId": "RID823",
       "description": "internal thoracic artery",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "leftId": "RID44770",
       "rightId": "RID44769",
       "partOfId": "RID49962",
@@ -25441,7 +25500,7 @@
     {
       "radlexId": "RID44769",
       "description": "right internal thoracic artery",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID823",
       "leftId": "RID44770",
       "partOfId": "RID49962",
@@ -25466,7 +25525,7 @@
     {
       "radlexId": "RID44770",
       "description": "left internal thoracic artery",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "unsidedId": "RID823",
       "rightId": "RID44769",
       "partOfId": "RID49962",
@@ -25491,7 +25550,7 @@
     {
       "radlexId": "RID49536",
       "description": "set of intercostal arteries",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "partOfId": "RID49962",
       "synonyms": [
         "intercostal arteries"
@@ -25510,7 +25569,7 @@
     {
       "radlexId": "RID16276",
       "description": "set of intercostal nerves",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "synonyms": [
         "rami ventrales nervus thoracicorum",
         "intercostal nerves set",
@@ -25601,8 +25660,8 @@
     {
       "radlexId": "RID43258",
       "description": "horizontal fissure of right lung",
-      "containedById": "RID1243",
-      "partOfId": "RID1301",
+      "containedById": "RID1302",
+      "partOfId": "RID1302",
       "codes": [
         {
           "system": "FMA",
@@ -25621,7 +25680,7 @@
     {
       "radlexId": "RID43260",
       "description": "oblique fissure",
-      "containedById": "RID1243",
+      "containedById": "RID1301",
       "leftId": "RID43260_RID5824",
       "rightId": "RID43260_RID5825",
       "partOfId": "RID1301",
@@ -25635,7 +25694,7 @@
     {
       "radlexId": "RID43260_RID5824",
       "description": "left oblique fissure",
-      "containedById": "RID1243",
+      "containedById": "RID1326",
       "unsidedId": "RID43260",
       "rightId": "RID43260_RID5825",
       "partOfId": "RID1326"
@@ -25643,7 +25702,7 @@
     {
       "radlexId": "RID43260_RID5825",
       "description": "right oblique fissure",
-      "containedById": "RID1243",
+      "containedById": "RID1302",
       "unsidedId": "RID43260",
       "leftId": "RID43260_RID5824",
       "partOfId": "RID1302"
@@ -25821,8 +25880,7 @@
     {
       "radlexId": "RID28584",
       "description": "apex of lung",
-      "containedById": "RID1243",
-      "partOfId": "RID1301",
+      "containedById": "RID1301",
       "synonyms": [
         "pulmonary apex",
         "lung apex",
@@ -25846,7 +25904,8 @@
     {
       "radlexId": "RID1216",
       "description": "coronary sinus",
-      "containedById": "RID1243",
+      "containedById": "RID1385",
+      "partOfId": "RID1301",
       "codes": [
         {
           "system": "FMA",
@@ -25869,7 +25928,7 @@
     {
       "radlexId": "RID1400",
       "description": "papillary muscle",
-      "containedById": "RID1243",
+      "containedById": "RID1385",
       "partOfId": "RID1385",
       "codes": [
         {
@@ -25893,7 +25952,7 @@
     {
       "radlexId": "RID1401",
       "description": "chordae tendineae",
-      "containedById": "RID1243",
+      "containedById": "RID1385",
       "partOfId": "RID1385",
       "synonyms": [
         "tendinous cords of heart"
@@ -25916,7 +25975,7 @@
     {
       "radlexId": "RID39309",
       "description": "leaflet of tricuspid valve",
-      "containedById": "RID1243",
+      "containedById": "RID1385",
       "partOfId": "RID1385",
       "synonyms": [
         "tricuspid valve leaflet"
@@ -25939,7 +25998,7 @@
     {
       "radlexId": "RID1404",
       "description": "interventricular septum",
-      "containedById": "RID1243",
+      "containedById": "RID1385",
       "partOfId": "RID1385",
       "synonyms": [
         "ventricular septum"
@@ -26296,7 +26355,7 @@
     {
       "radlexId": "RID31602",
       "description": "transversus abdominis",
-      "containedById": "RID56",
+      "containedById": "RID30008",
       "leftId": "RID31604",
       "rightId": "RID31603",
       "partOfId": "RID32811",
@@ -26324,7 +26383,7 @@
     {
       "radlexId": "RID31603",
       "description": "right transversus abdominis",
-      "containedById": "RID56",
+      "containedById": "RID30008",
       "unsidedId": "RID31602",
       "leftId": "RID31604",
       "partOfId": "RID32811",
@@ -26342,7 +26401,7 @@
     {
       "radlexId": "RID31604",
       "description": "left transversus abdominis",
-      "containedById": "RID56",
+      "containedById": "RID30008",
       "unsidedId": "RID31602",
       "rightId": "RID31603",
       "partOfId": "RID32811",
@@ -26650,7 +26709,7 @@
     {
       "radlexId": "RID942",
       "description": "superior rectal artery",
-      "containedById": "RID410",
+      "containedById": "RID397",
       "partOfId": "RID50378",
       "synonyms": [
         "superior hemorrhoidal artery",
@@ -28253,7 +28312,7 @@
     {
       "radlexId": "RID32755",
       "description": "musculature of thorax",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "partOfId": "RID13209",
       "synonyms": [
         "set of muscles of thorax",
@@ -28274,7 +28333,7 @@
     {
       "radlexId": "RID32809",
       "description": "musculature of anterior abdominal wall",
-      "containedById": "RID56",
+      "containedById": "RID30014",
       "partOfId": "RID13209",
       "synonyms": [
         "musculature of front of abdomen",
@@ -28296,7 +28355,7 @@
     {
       "radlexId": "RID32807",
       "description": "musculature of back of thorax",
-      "containedById": "RID1243",
+      "containedById": "RID32755",
       "partOfId": "RID13209",
       "synonyms": [
         "set of muscles of back of thorax"
@@ -28348,6 +28407,29 @@
         {
           "system": "UMLS",
           "code": "C4239659"
+        }
+      ]
+    },
+    {
+      "radlexId": "RID58",
+      "description": "liver",
+      "containedById": "RID397",
+      "codes": [
+        {
+          "system": "FMA",
+          "code": "7197"
+        },
+        {
+          "system": "SNOMED",
+          "code": "10200004"
+        },
+        {
+          "system": "MESH",
+          "code": "A03.620"
+        },
+        {
+          "system": "UMLS",
+          "code": "C0023884"
         }
       ]
     },
@@ -28760,7 +28842,7 @@
     {
       "radlexId": "RID29859",
       "description": "anterior chest wall",
-      "containedById": "RID1243",
+      "containedById": "RID2468",
       "codes": [
         {
           "system": "FMA",

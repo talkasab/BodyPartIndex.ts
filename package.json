@@ -1,0 +1,38 @@
+{
+  "name": "@talkasab/body_part_index",
+  "version": "0.0.1",
+  "description": "Provides data and simple libraries for manipulating a standard list of anatomic locations.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "ISC",
+  "scripts": {
+    "dev": "webpack serve",
+    "build": "cross-env LIB_VERSION=$npm_package_version NODE_ENV=production webpack --mode production && npm run types",
+    "types": "dts-bundle-generator -o dist/index.d.ts src/declarations/extend.d.ts",
+    "verify:typescript": "tsc --noEmit",
+    "verify:eslint": "eslint src --ext .tsx --ext .ts",
+    "verify": "npm run verify:typescript && npm run verify:eslint",
+    "test": "jest --coverage",
+	"publish": "npm run build && clean-publish --access public"
+  },
+  "devDependencies": {
+    "@tim.mouskhelichvili/eslint-config-typescript": "^2.0.0",
+    "@types/jest": "^28.1.4",
+    "@types/node": "18.0.3",
+    "clean-publish": "^4.0.1",
+    "cross-env": "^7.0.3",
+    "dts-bundle-generator": "^6.12.0",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^28.1.2",
+    "jest-environment-jsdom": "^28.1.2",
+    "jest-junit": "^14.0.0",
+    "terser-webpack-plugin": "^5.3.3",
+    "ts-jest": "^28.0.5",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.7.4",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3"
+  },
+  "dependencies": {}
+}

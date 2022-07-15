@@ -1,4 +1,0 @@
-[submodule "CALIpy"]
-	path = CALIpy
-	url = git@github.com:elitalien/CALIpy.git
-	branch = master
