@@ -5,7 +5,7 @@ Provides data and simple libraries for manipulating a standard list of anatomic 
 ## Installation
 
 ```console
-npm i path-to-library
+npm i @talkasab/body_part_index
 ```
 
 # `BodyPartIndex` (Scenarios)
@@ -15,7 +15,7 @@ npm i path-to-library
 To open the library, you first need to import it into your project. Then, you can use the `BodyPartIndex` object.
 
 ```typescript
-import { BodyPartIndex } from 'path-to-library';
+import { BodyPartIndex } from '@talkasab/body_part_index';
 
 const index = new BodyPartIndex();
 ```
