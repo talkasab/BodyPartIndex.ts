@@ -2,6 +2,7 @@ import { IBodyPartsResponse } from 'src/bodyParts/interfaces/IBodyPartsResponse'
 import { IConfiguration } from 'src/bodyParts/interfaces/IConfiguration';
 import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
 import { getBodyParts } from 'src/bodyParts/utils/data';
+import { ICode } from 'src/bodyParts/interfaces/ICode';
 import { configuration } from 'src/configuration';
 
 export let BODY_PARTS: IBodyPartsResponse;
@@ -63,6 +64,32 @@ export class BodyPartIndex {
     }
 
     /**
+	 * Returns a BodyPart by code and system.
+	 * @param {ICode} obj - The obj.
+	 */
+    public getByCodeAndSystem (obj: ICode): BodyPart | null {
+        const radlexIds = BODY_PARTS.codes[obj.code];
+        if (!radlexIds?.length) {
+            return null;
+        }
+
+        for (const radlexId of radlexIds) {
+            const data = BODY_PARTS.map[radlexId];
+            const codes = data.codes as ICode[];
+
+            for (const code of codes) {
+                // eslint-disable-next-line max-depth
+                if (code.code === obj.code && code.system === obj.system) {
+                    return new BodyPart(data);
+                }				
+            }
+        }
+
+        /* istanbul ignore next */
+        return null;
+    }
+
+    /**
 	 * Returns a BodyPart by radlexId.
 	 * @param {string} radlexId - The radlexId.
 	 */
@@ -80,7 +107,7 @@ export class BodyPartIndex {
 	 * Returns a BodyPart by code.
 	 * @param {string} code - The code.
 	 */
-    public getByCode (code: string): BodyPart | null {
+    private getByCode (code: string): BodyPart | null {
         const radlexIds = BODY_PARTS.codes[code];
         if (!radlexIds?.length) {
             return null;

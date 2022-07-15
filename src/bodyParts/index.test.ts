@@ -158,3 +158,26 @@ describe('search()', () => {
         expect(index.search('feet2')).toEqual([]);
     });
 });
+
+describe('getByCodeAndSystem()', () => {
+    let index: BodyPartIndex;
+
+    beforeEach(() => {
+        configuration.file = fileMock;
+        index = new BodyPartIndex();
+    });
+
+    it ('returns the correct BodyPart', () => {
+        expect(index.getByCodeAndSystem({ 
+            code: '78320081', 
+            system: 'SNOMED' 
+        })).toEqual(new BodyPart(bodyPart1));
+    });
+
+    it ('returns null if BodyPart doesn\'t exist', () => {
+        expect(index.getByCodeAndSystem({ 
+            code: '783200812', 
+            system: 'SNOMED' 
+        })).toEqual(null);
+    });
+});

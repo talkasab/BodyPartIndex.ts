@@ -70,6 +70,19 @@ const bodyPart3 = index.get('THX1138'); // Local code
 
 This function returns a `BodyPart` object.
 
+## How to get a particular body part by code and system?
+
+To get a body part by code AND system, you need to use the `getByCodeAndSystem` function.
+
+```typescript
+const index = new BodyPartIndex();
+const bodyPart = index.getByCodeAndSystem({
+    code: '443167003',
+    system: 'SNOMED'
+});
+```
+This function returns a `BodyPart` object.
+
 ## How to search for body parts based on names or synonyms?
 
 The `search` function will return all the BodyParts that match a specific search value.
