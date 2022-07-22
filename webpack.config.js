@@ -12,11 +12,11 @@ const isDev = () => !process.env.NODE_ENV;
  * Returns the environment.
  */
 const getEnvironment = () => {
-    if (isDev()) {
-        return 'dev';
-    }
+	if (isDev()) {
+		return 'dev';
+	}
 
-    return process.env.NODE_ENV;
+	return process.env.NODE_ENV;
 };
 
 /**
@@ -25,9 +25,9 @@ const getEnvironment = () => {
 const getPlugins = () => {
 	const plugins = [
 		new Webpack.DefinePlugin({
-            __ENV__: JSON.stringify(getEnvironment()),
-            __VERSION__: JSON.stringify(process.env.LIB_VERSION)
-        })
+			__ENV__: JSON.stringify(getEnvironment()),
+			__VERSION__: JSON.stringify(process.env.LIB_VERSION)
+		})
 	];
 
 	if (isDev()) {
@@ -45,64 +45,70 @@ const getPlugins = () => {
  * Returns the config.
  */
 module.exports = {
-    context: __dirname,
-    entry: './src/index.ts',
-    output: {
-        path: Path.resolve(__dirname, 'dist'),
+	context: __dirname,
+	entry: './src/index.ts',
+	output: {
+		path: Path.resolve(__dirname, 'dist'),
 		libraryTarget: 'umd',
-        filename: 'index.js'
-    },
-    devtool: isDev() ? 'source-map' : false,
-    resolve: {
-        extensions: [ '.ts', '.tsx', '.js' ],
-        modules: [ '.', 'node_modules' ]
-    },
-    module: {
-        rules: [
-            {
-                test: /\.tsx?$/,
-                exclude: /node_modules/,
-                use: [
-                    {
-                        loader: 'ts-loader',
-                        options: {
-                            transpileOnly: true,
-                            experimentalWatchApi: true
-                        }
-                    }
-                ]
-            },
-            {
-                enforce: 'pre',
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'source-map-loader'
-            }
-        ]
-    },
-    plugins: getPlugins(),
-    mode: 'development',
+		globalObject: 'this',
+		filename: 'index.js'
+	},
+	devtool: isDev() ? 'source-map' : false,
+	resolve: {
+		extensions: ['.ts', '.tsx', '.js'],
+		modules: ['.', 'node_modules']
+	},
+	module: {
+		rules: [
+			{
+				test: /\.tsx?$/,
+				exclude: /node_modules/,
+				use: [
+					{
+						loader: 'ts-loader',
+						options: {
+							transpileOnly: true,
+							experimentalWatchApi: true
+						}
+					}
+				]
+			},
+			{
+				enforce: 'pre',
+				test: /\.js$/,
+				exclude: /node_modules/,
+				loader: 'source-map-loader'
+			}
+		]
+	},
+	plugins: getPlugins(),
+	mode: 'development',
 	devServer: {
-        allowedHosts: 'all',
-        compress: true,
-        port: 9001,
-        hot: true,
-        historyApiFallback: true,
-    },
-    optimization: {
-        minimizer: [
-            new TerserPlugin({
-                parallel: true,
-                terserOptions: {
+		allowedHosts: 'all',
+		compress: true,
+		port: 9001,
+		hot: true,
+		historyApiFallback: true,
+	},
+	optimization: {
+		minimizer: [
+			new TerserPlugin({
+				parallel: true,
+				terserOptions: {
 					mangle: {
 						keep_classnames: true,
 						keep_fnames: true,
 					},
-                    output: {
-                        comments: false
-                    }
-                }
-            })
-        ]
-    }
+					output: {
+						comments: false
+					}
+				}
+			})
+		]
+	},
+	performance: {
+		hints: false,
+		maxEntrypointSize: 512000,
+		maxAssetSize: 512000
+	}
 };
