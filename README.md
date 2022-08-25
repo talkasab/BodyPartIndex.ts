@@ -20,9 +20,23 @@ import { BodyPartIndex } from '@talkasab/body_part_index';
 const index = new BodyPartIndex();
 ```
 
+## How to use a local JSON file of body parts?
+
+The packages comes bundled with a version of the body part database as a JSON file,
+which it loads by default. To initialize a `BodyPartIndex` object with a local JSON
+file (with the same structure), separately load/parse the file, and pass the resulting
+JSON as the `bodyPartData` property of a configuration object to the constructor.
+
+```typescript
+const fs = require('fs')
+const bodyPartsJson = JSON.parse(fs.readFileSync('localBodyPartData.json', 'utf8'));
+const index = new BodyPartIndex({bodyPartData: bodyPartsJson});
+```
+
 ## How to add local codes?
 
-To add local codes to the library, you need to pass a JSON with the data linking the code to the radlexId.
+To add local codes to the library, you need to pass a JSON with the data linking the code to the radlexId as the `localBodyPartMappings` to a configuration object as an argument
+to the constructor.
 
 ```typescript
 const index = new BodyPartIndex({
