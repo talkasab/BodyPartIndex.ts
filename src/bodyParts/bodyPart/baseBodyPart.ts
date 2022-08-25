@@ -21,6 +21,13 @@ export abstract class BaseBodyPart {
     }
 
     /**
+	 * Returns the Radlex ID for the BodyPart.
+	 */
+    public getRadlexId (): string {
+        return this.data.radlexId;
+    }
+
+    /**
 	 * Returns the BodyPart description field.
 	 */
     public getDescription (): string {

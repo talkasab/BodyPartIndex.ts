@@ -1,6 +1,7 @@
 import { BodyPartIndex, BODY_PARTS } from 'src/bodyParts/index';
 import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
 import { configuration } from 'src/configuration';
+import { IBodyPartsFile } from './interfaces/IBodyPartsFile';
 
 const bodyPart1 = {
     codes: [ { code: '78320081', system: 'SNOMED' } ],
@@ -56,6 +57,29 @@ describe('setUpConfiguration()', () => {
     beforeEach(() => {
         configuration.file = fileMock;
         new BodyPartIndex({
+            localBodyPartMappings: [
+                {
+                    localCode: {
+                        code: 'AAABBBCC',
+                        system: 'LOCAL'
+                    },
+                    radlexId: 'RID901'
+                }
+            ]
+        });
+    });
+
+    it ('matches the BODY_PARTS object', () => {
+        expect(BODY_PARTS).toMatchSnapshot();
+    });
+});
+
+describe('setUpConfiguration() with local JSON file', () => {
+    beforeEach(() => {
+        // eslint-disable-next-line @typescript-eslint/no-var-requires
+        const bodyParts = require('./src/bodyParts/sampleBodyParts.json') as IBodyPartsFile;
+        new BodyPartIndex({
+            bodyPartData: bodyParts,
             localBodyPartMappings: [
                 {
                     localCode: {

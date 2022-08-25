@@ -83,6 +83,10 @@ describe('BaseBodyPart', () => {
         expect(bodyPart.getData()).toBe(bodyPart1);
     });
 
+    it('returns the correct radlex id', () => {
+        expect(bodyPart.getRadlexId()).toBe('RID294');
+    }),
+
     it('returns the correct contained id', () => {
         expect(bodyPart.getContainedById()).toBe(bodyPart1.containedById);
     });

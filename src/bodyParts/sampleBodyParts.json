@@ -1,0 +1,40 @@
+{
+    "$schema": "MY_SCHEMA",
+    "$version": "2.0.0",
+    "bodyParts": [ 
+		{
+			"codes": [ { "code": "78320081", "system": "SNOMED" } ],
+			"containedById": "RID901",
+			"description": "hand",
+			"partOfId": "RID902",
+			"radlexId": "RID901"
+		},
+		{
+			"codes": [ { "code": "78320082", "system": "SNOMED" } ],
+			"containedById": "RID901",
+			"description": "feet",
+			"radlexId": "RID902"
+		},
+		{
+			"codes": [ { "code": "78320083", "system": "SNOMED" } ],
+			"containedById": "RID901",
+			"description": "leg",
+			"radlexId": "RID903",
+			"synonyms": [ "feet" ]
+		},
+		{
+			"containedById": "RID903",
+			"description": "eye",
+			"radlexId": "RID904",
+			"synonyms": [ "aaa", "ccc" ],
+			"partOfId": "RID902"
+		},
+		{
+			"codes": [ { "code": "78320085", "system": "SNOMED" } ],
+			"containedById": "RID904",
+			"description": "finger",
+			"partOfId": "RID901",
+			"radlexId": "RID905"
+		}
+	]
+}

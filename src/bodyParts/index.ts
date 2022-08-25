@@ -1,4 +1,5 @@
 import { IBodyPartsResponse } from 'src/bodyParts/interfaces/IBodyPartsResponse';
+import { IBodyPartsFile } from './interfaces/IBodyPartsFile';
 import { IConfiguration } from 'src/bodyParts/interfaces/IConfiguration';
 import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
 import { getBodyParts } from 'src/bodyParts/utils/data';
@@ -128,7 +129,7 @@ export class BodyPartIndex {
 	 * @param {IConfiguration?} config - The local configuration.
 	 */
     private setUpConfiguration (config?: IConfiguration): void {
-        BODY_PARTS = getBodyParts(configuration.file, config);
+        const bodyParts: IBodyPartsFile = config?.bodyPartData || configuration.file;
+        BODY_PARTS = getBodyParts(bodyParts, config);
     }
-
 }
