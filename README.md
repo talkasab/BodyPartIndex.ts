@@ -1,6 +1,6 @@
 # BodyPartIndex.ts
 
-Provides data and simple libraries for manipulating a standard list of anatomic locations.
+Provides data and simple libraries for manipulating a standard list of anatomic locations (see https://www.anatomiclocations.org).
 
 ## Installation
 
