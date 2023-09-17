@@ -1,0 +1,48 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/alpine
+{
+	"name": "Alpine",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "oven/bun:latest",
+	"features": {
+		"ghcr.io/shyim/devcontainers-features/bun:0": {},
+		"ghcr.io/devcontainers/features/common-utils:2": {},
+		"ghcr.io/devcontainers/features/node:1": {},
+		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"aaron-bond.better-comments",
+				"oven.bun-vscode",
+				"WallabyJs.console-ninja",
+				"dbaeumer.vscode-eslint",
+				"donjayamanne.githistory",
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"ZainChen.json",
+				"ritwickdey.LiveServer",
+				"ms-vsliveshare.vsliveshare",
+				"yzane.markdown-pdf",
+				"esbenp.prettier-vscode",
+				"yoavbls.pretty-ts-errors",
+				"WallabyJs.quokka-vscode",
+				"WallabyJs.wallaby-extension-pack",
+				"redhat.vscode-yaml"
+			]
+		}
+	}
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "uname -a",
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}

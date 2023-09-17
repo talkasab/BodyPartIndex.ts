@@ -1,6 +1,8 @@
-import { getBodyPartById, transformMapToBodyParts } from 'src/bodyParts/utils/bodyPart';
-import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
-import { mockBodyParts } from 'src/tests/utils';
+import { it, describe, expect, beforeEach } from "bun:test";
+
+import { getBodyPartById, transformMapToBodyParts } from './bodyPart';
+import { BodyPart } from '../bodyPart/bodyPart';
+import { BodyPartIndex } from "..";
 
 const radlexIdAAA = {
     containedById: '',
@@ -22,7 +24,7 @@ describe('transformMapToBodyParts()', () => {
     let result: BodyPart[];
 
     beforeEach(() => {
-        mockBodyParts({
+        BodyPartIndex.mockBodyParts({
             map: {
                 radlexIdAAA,
                 radlexIdBBB,
@@ -47,7 +49,7 @@ describe('transformMapToBodyParts()', () => {
 
 describe('getBodyPartById()', () => {
     beforeEach(() => {
-        mockBodyParts({
+        BodyPartIndex.mockBodyParts({
             map: {
                 radlexIdAAA,
                 radlexIdBBB,

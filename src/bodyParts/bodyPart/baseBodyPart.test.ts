@@ -1,8 +1,9 @@
-import { IBodyPart } from 'src/bodyParts/interfaces/IBodyPart';
-import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
-import { ICode } from 'src/bodyParts/interfaces/ICode';
-import { Code } from 'src/bodyParts/bodyPart/code';
-import { mockBodyParts } from 'src/tests/utils';
+import { it, describe, expect, beforeEach } from "bun:test";
+import { IBodyPart } from '../interfaces/IBodyPart';
+import { BodyPart } from './bodyPart';
+import { ICode } from '../interfaces/ICode';
+import { Code } from './code';
+import { BodyPartIndex } from '../index';
 
 const code1: ICode = {
     code: '265256',
@@ -66,7 +67,7 @@ describe('BaseBodyPart', () => {
     let bodyPart: BodyPart;
 
     beforeEach(() => {
-        mockBodyParts({
+        BodyPartIndex.mockBodyParts({
             map: {
                 'RID2507': bodyPartContainedById,
                 'RID270': bodyPartPartOfId,
@@ -161,7 +162,7 @@ describe('BaseBodyPart with non-existing properties', () => {
     let bodyPart: BodyPart;
 
     beforeEach(() => {
-        mockBodyParts({
+        BodyPartIndex.mockBodyParts({
             map: {}
         });
         bodyPart = new BodyPart(bodyPartContainedById);

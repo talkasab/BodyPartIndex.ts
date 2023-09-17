@@ -1,51 +1,51 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Bun Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`setUpConfiguration() matches the BODY_PARTS object 1`] = `
-Object {
-  "codes": Object {
-    "78320081": Array [
+{
+  "codes": {
+    "78320081": [
       "RID901",
     ],
-    "78320082": Array [
+    "78320082": [
       "RID902",
     ],
-    "78320083": Array [
+    "78320083": [
       "RID903",
     ],
-    "78320085": Array [
+    "78320085": [
       "RID905",
     ],
-    "AAABBBCC": Array [
+    "AAABBBCC": [
       "RID901",
     ],
   },
-  "containedAncestors": Object {
+  "containedAncestors": {
     "RID901": "RID901",
     "RID902": "RID901",
     "RID903": "RID901",
     "RID904": "RID903",
     "RID905": "RID904",
   },
-  "containedChildren": Object {
-    "RID901": Array [
+  "containedChildren": {
+    "RID901": [
       "RID902",
       "RID903",
     ],
-    "RID903": Array [
+    "RID903": [
       "RID904",
     ],
-    "RID904": Array [
+    "RID904": [
       "RID905",
     ],
   },
-  "map": Object {
-    "RID901": Object {
-      "codes": Array [
-        Object {
+  "map": {
+    "RID901": {
+      "codes": [
+        {
           "code": "78320081",
           "system": "SNOMED",
         },
-        Object {
+        {
           "code": "AAABBBCC",
           "system": "LOCAL",
         },
@@ -55,9 +55,9 @@ Object {
       "partOfId": "RID902",
       "radlexId": "RID901",
     },
-    "RID902": Object {
-      "codes": Array [
-        Object {
+    "RID902": {
+      "codes": [
+        {
           "code": "78320082",
           "system": "SNOMED",
         },
@@ -66,9 +66,9 @@ Object {
       "description": "feet",
       "radlexId": "RID902",
     },
-    "RID903": Object {
-      "codes": Array [
-        Object {
+    "RID903": {
+      "codes": [
+        {
           "code": "78320083",
           "system": "SNOMED",
         },
@@ -76,23 +76,23 @@ Object {
       "containedById": "RID901",
       "description": "leg",
       "radlexId": "RID903",
-      "synonyms": Array [
+      "synonyms": [
         "feet",
       ],
     },
-    "RID904": Object {
+    "RID904": {
       "containedById": "RID903",
       "description": "eye",
       "partOfId": "RID902",
       "radlexId": "RID904",
-      "synonyms": Array [
+      "synonyms": [
         "aaa",
         "ccc",
       ],
     },
-    "RID905": Object {
-      "codes": Array [
-        Object {
+    "RID905": {
+      "codes": [
+        {
           "code": "78320085",
           "system": "SNOMED",
         },
@@ -103,16 +103,16 @@ Object {
       "radlexId": "RID905",
     },
   },
-  "partOfAncestors": Object {
+  "partOfAncestors": {
     "RID901": "RID902",
     "RID904": "RID902",
     "RID905": "RID901",
   },
-  "partOfChildren": Object {
-    "RID901": Array [
+  "partOfChildren": {
+    "RID901": [
       "RID905",
     ],
-    "RID902": Array [
+    "RID902": [
       "RID901",
       "RID904",
     ],
@@ -122,51 +122,51 @@ Object {
 `;
 
 exports[`setUpConfiguration() with local JSON file matches the BODY_PARTS object 1`] = `
-Object {
-  "codes": Object {
-    "78320081": Array [
+{
+  "codes": {
+    "78320081": [
       "RID901",
     ],
-    "78320082": Array [
+    "78320082": [
       "RID902",
     ],
-    "78320083": Array [
+    "78320083": [
       "RID903",
     ],
-    "78320085": Array [
+    "78320085": [
       "RID905",
     ],
-    "AAABBBCC": Array [
+    "AAABBBCC": [
       "RID901",
     ],
   },
-  "containedAncestors": Object {
+  "containedAncestors": {
     "RID901": "RID901",
     "RID902": "RID901",
     "RID903": "RID901",
     "RID904": "RID903",
     "RID905": "RID904",
   },
-  "containedChildren": Object {
-    "RID901": Array [
+  "containedChildren": {
+    "RID901": [
       "RID902",
       "RID903",
     ],
-    "RID903": Array [
+    "RID903": [
       "RID904",
     ],
-    "RID904": Array [
+    "RID904": [
       "RID905",
     ],
   },
-  "map": Object {
-    "RID901": Object {
-      "codes": Array [
-        Object {
+  "map": {
+    "RID901": {
+      "codes": [
+        {
           "code": "78320081",
           "system": "SNOMED",
         },
-        Object {
+        {
           "code": "AAABBBCC",
           "system": "LOCAL",
         },
@@ -176,9 +176,9 @@ Object {
       "partOfId": "RID902",
       "radlexId": "RID901",
     },
-    "RID902": Object {
-      "codes": Array [
-        Object {
+    "RID902": {
+      "codes": [
+        {
           "code": "78320082",
           "system": "SNOMED",
         },
@@ -187,9 +187,9 @@ Object {
       "description": "feet",
       "radlexId": "RID902",
     },
-    "RID903": Object {
-      "codes": Array [
-        Object {
+    "RID903": {
+      "codes": [
+        {
           "code": "78320083",
           "system": "SNOMED",
         },
@@ -197,23 +197,23 @@ Object {
       "containedById": "RID901",
       "description": "leg",
       "radlexId": "RID903",
-      "synonyms": Array [
+      "synonyms": [
         "feet",
       ],
     },
-    "RID904": Object {
+    "RID904": {
       "containedById": "RID903",
       "description": "eye",
       "partOfId": "RID902",
       "radlexId": "RID904",
-      "synonyms": Array [
+      "synonyms": [
         "aaa",
         "ccc",
       ],
     },
-    "RID905": Object {
-      "codes": Array [
-        Object {
+    "RID905": {
+      "codes": [
+        {
           "code": "78320085",
           "system": "SNOMED",
         },
@@ -224,16 +224,16 @@ Object {
       "radlexId": "RID905",
     },
   },
-  "partOfAncestors": Object {
+  "partOfAncestors": {
     "RID901": "RID902",
     "RID904": "RID902",
     "RID905": "RID901",
   },
-  "partOfChildren": Object {
-    "RID901": Array [
+  "partOfChildren": {
+    "RID901": [
       "RID905",
     ],
-    "RID902": Array [
+    "RID902": [
       "RID901",
       "RID904",
     ],

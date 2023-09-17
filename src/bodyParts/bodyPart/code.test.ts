@@ -1,4 +1,5 @@
-import { Code } from 'src/bodyParts/bodyPart/code';
+import { it, describe, expect, beforeEach } from "bun:test";
+import { Code } from './code';
 
 describe('Code class', () => {
     let code: Code;

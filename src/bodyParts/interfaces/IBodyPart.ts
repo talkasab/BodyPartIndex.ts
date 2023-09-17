@@ -1,4 +1,4 @@
-import { ICode } from 'src/bodyParts/interfaces/ICode';
+import { ICode } from '../../bodyParts/interfaces/ICode';
 
 export type SexSpecific = 'Male' | 'Female';
 

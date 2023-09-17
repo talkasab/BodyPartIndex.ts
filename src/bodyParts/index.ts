@@ -1,10 +1,10 @@
-import { IBodyPartsResponse } from 'src/bodyParts/interfaces/IBodyPartsResponse';
+import { IBodyPartsResponse } from './interfaces/IBodyPartsResponse';
 import { IBodyPartsFile } from './interfaces/IBodyPartsFile';
-import { IConfiguration } from 'src/bodyParts/interfaces/IConfiguration';
-import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
-import { getBodyParts } from 'src/bodyParts/utils/data';
-import { ICode } from 'src/bodyParts/interfaces/ICode';
-import { configuration } from 'src/configuration';
+import { IConfiguration } from './interfaces/IConfiguration';
+import { BodyPart } from './bodyPart/bodyPart';
+import { getBodyParts } from './utils/data';
+import { ICode } from './interfaces/ICode';
+import { configuration } from '../configuration';
 
 export let BODY_PARTS: IBodyPartsResponse;
 
@@ -132,4 +132,9 @@ export class BodyPartIndex {
         const bodyParts: IBodyPartsFile = config?.bodyPartData || configuration.file;
         BODY_PARTS = getBodyParts(bodyParts, config);
     }
+
+	public static mockBodyParts = (mock: Partial<IBodyPartsResponse>): void => {
+		// @ts-ignore
+		BODY_PARTS = mock;
+	};
 }

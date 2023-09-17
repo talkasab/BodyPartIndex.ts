@@ -1,6 +1,8 @@
-import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
-import { getBodyParts } from 'src/bodyParts/utils/data';
-import { mockBodyParts } from 'src/tests/utils';
+import { it, describe, expect, beforeEach } from "bun:test";
+
+import { BodyPart } from './bodyPart';
+import { getBodyParts } from '../utils/data';
+import { BodyPartIndex } from '../index';
 
 const bodyPart1 = {
     codes: [ { code: '78320081', system: 'SNOMED' } ],
@@ -51,7 +53,7 @@ const fileMock = {
 
 describe('BodyPart with contained children', () => {
     beforeEach(() => {
-        mockBodyParts(getBodyParts(fileMock));
+        BodyPartIndex.mockBodyParts(getBodyParts(fileMock));
     });
 
     it ('returns the correct immediate contained children', () => {
@@ -77,7 +79,7 @@ describe('BodyPart with contained children', () => {
 
 describe('BodyPart with contained ancestors', () => {
     beforeEach(() => {
-        mockBodyParts(getBodyParts(fileMock));
+        BodyPartIndex.mockBodyParts(getBodyParts(fileMock));
     });
 
     it ('returns the correct contained ancestors', () => {
@@ -107,7 +109,7 @@ describe('BodyPart with contained ancestors', () => {
 
 describe('BodyPart with partOf children', () => {
     beforeEach(() => {
-        mockBodyParts(getBodyParts(fileMock));
+        BodyPartIndex.mockBodyParts(getBodyParts(fileMock));
     });
 
     it ('returns the correct immediate partOf children', () => {
@@ -132,7 +134,7 @@ describe('BodyPart with partOf children', () => {
 
 describe('BodyPart with partOf ancestors', () => {
     beforeEach(() => {
-        mockBodyParts(getBodyParts(fileMock));
+        BodyPartIndex.mockBodyParts(getBodyParts(fileMock));
     });
 
     it ('returns the correct partOf ancestors', () => {

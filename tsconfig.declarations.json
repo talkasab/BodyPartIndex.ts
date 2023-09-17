@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json", // include the existing tsconfig.json
+  "compilerOptions": {
+	"declaration": true, // generate declaration files
+    "noEmit": false, // override the noEmit setting
+    "outFile": "dist/index.d.ts", // specify the output file
+    "emitDeclarationOnly": true, // emit only declaration files
+	"declarationMap": true, // generate source map for declaration files
+	"composite": false,
+	"incremental": false
+  },
+  "exclude": ["**.test.ts"]
+}

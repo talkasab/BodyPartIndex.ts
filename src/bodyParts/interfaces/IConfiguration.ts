@@ -1,4 +1,4 @@
-import { ILocalCode } from 'src/bodyParts/interfaces/ILocalCode';
+import { ILocalCode } from '../../bodyParts/interfaces/ILocalCode';
 import { IBodyPartsFile } from './IBodyPartsFile';
 
 export interface IConfiguration {

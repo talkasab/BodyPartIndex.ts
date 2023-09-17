@@ -1,7 +1,8 @@
-import { ChildrenMap, AncestorsMap } from 'src/bodyParts/interfaces/IBodyPartsResponse';
-import { BodyPartsMap, transformMapToBodyParts } from 'src/bodyParts/utils/bodyPart';
-import { BaseBodyPart } from 'src/bodyParts/bodyPart/baseBodyPart';
-import { BODY_PARTS } from 'src/bodyParts';
+import { ChildrenMap, AncestorsMap } from '../interfaces/IBodyPartsResponse';
+import { BodyPartsMap, transformMapToBodyParts } from '../utils/bodyPart';
+import { BaseBodyPart } from './baseBodyPart';
+import { BODY_PARTS } from '..';
+
 
 export class BodyPart extends BaseBodyPart {
 

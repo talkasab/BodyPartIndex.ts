@@ -1,7 +1,7 @@
-import { IBodyPart, SexSpecific } from 'src/bodyParts/interfaces/IBodyPart';
-import { getBodyPartById } from 'src/bodyParts/utils/bodyPart';
-import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
-import { Code } from 'src/bodyParts/bodyPart/code';
+import { IBodyPart, SexSpecific } from '../interfaces/IBodyPart';
+import { getBodyPartById } from '../utils/bodyPart';
+import { BodyPart } from './bodyPart';
+import { Code } from './code';
 
 export abstract class BaseBodyPart {
 

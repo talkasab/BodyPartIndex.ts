@@ -1,5 +1,5 @@
-import { IBodyPart } from 'src/bodyParts/interfaces/IBodyPart';
-import { ICode } from 'src/bodyParts/interfaces/ICode';
+import { IBodyPart } from '../interfaces/IBodyPart';
+import { ICode } from '../interfaces/ICode';
 
 export type AncestorsMap = { [key: string]: string };
 export type ChildrenMap = { [key: string]: string[] };

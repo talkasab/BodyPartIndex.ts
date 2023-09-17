@@ -1,5 +1,5 @@
-import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
-import { BODY_PARTS } from 'src/bodyParts';
+import { BodyPart } from '../bodyPart/bodyPart';
+import { BODY_PARTS } from '..';
 
 export type BodyPartsMap = { [key: string]: boolean };
 

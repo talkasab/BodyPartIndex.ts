@@ -5,10 +5,10 @@ import {
     CodesMap, 
     IBodyPartsResponse, 
     LocalCodesMap 
-} from 'src/bodyParts/interfaces/IBodyPartsResponse';
-import { IBodyPartsFile } from 'src/bodyParts/interfaces/IBodyPartsFile';
-import { IConfiguration } from 'src/bodyParts/interfaces/IConfiguration';
-import { IBodyPart } from 'src/bodyParts/interfaces/IBodyPart';
+} from '../../bodyParts/interfaces/IBodyPartsResponse';
+import { IBodyPartsFile } from '../../bodyParts/interfaces/IBodyPartsFile';
+import { IConfiguration } from '../../bodyParts/interfaces/IConfiguration';
+import { IBodyPart } from '../../bodyParts/interfaces/IBodyPart';
 
 /**
  * Returns the body parts response.

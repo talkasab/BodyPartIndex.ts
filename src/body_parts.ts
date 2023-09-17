@@ -1,6 +1,6 @@
-{
+export default JSON.parse(`{
 	"$version": "DEV2022-08-23T18:55:56.999Z",
-	"$schema": "body_parts_schema.json",
+	"$schema": "../body_parts_schema.json",
 	"bodyParts": [
 	  {
 		"radlexId": "RID56",
@@ -44000,4 +44000,4 @@
 		"leftId": "RID6394_RID5824"
 	  }
 	]
-  }
+  }`);

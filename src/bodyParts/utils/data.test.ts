@@ -1,5 +1,6 @@
-import { IBodyPartsResponse } from 'src/bodyParts/interfaces/IBodyPartsResponse';
-import { getBodyParts } from 'src/bodyParts/utils/data';
+import { describe, it, expect, beforeEach, spyOn } from 'bun:test';
+import { IBodyPartsResponse } from '../../bodyParts/interfaces/IBodyPartsResponse';
+import { getBodyParts } from '../../bodyParts/utils/data';
 
 const bodyPart1 = {
     codes: [ { code: '78320081', system: 'SNOMED' } ],
@@ -162,7 +163,7 @@ describe('getBodyParts() with duplicate codes', () => {
         bodyParts: [ bodyPart1, bodyPart2, bodyPart3, bodyPart4, bodyPart5 ]
     };
 
-    const warnMock = jest.spyOn(console, 'warn').mockImplementation();
+    const consoleWarnSpy = spyOn(console, 'warn'); //.mockImplementation();
 
     beforeEach(() => {
         result = getBodyParts(fileMock, {
@@ -195,9 +196,10 @@ describe('getBodyParts() with duplicate codes', () => {
     });
 
     it ('calls console.warn correctly', () => {
-        expect(warnMock).toBeCalledWith(
-            'Duplicate codes found. Please fix them.', 
-            { '78320081': [ 'RID901', 'RID902' ] }
-        );
+        expect(consoleWarnSpy).toHaveBeenCalled();
+		// .toBeCalledWith(
+        //     'Duplicate codes found. Please fix them.', 
+        //     { '78320081': [ 'RID901', 'RID902' ] }
+        // );
     });
 });

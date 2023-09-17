@@ -1,4 +1,4 @@
-import { IBodyPart } from 'src/bodyParts/interfaces/IBodyPart';
+import { IBodyPart } from '../../bodyParts/interfaces/IBodyPart';
 
 export interface IBodyPartsFile {
 	$schema: string;

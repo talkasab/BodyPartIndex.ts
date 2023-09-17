@@ -1,6 +1,9 @@
-import { BodyPartIndex, BODY_PARTS } from 'src/bodyParts/index';
-import { BodyPart } from 'src/bodyParts/bodyPart/bodyPart';
-import { configuration } from 'src/configuration';
+import { it, describe, expect, beforeEach } from "bun:test";
+import { BodyPartIndex, BODY_PARTS } from '../bodyParts/index';
+import { BodyPart } from '../bodyParts/bodyPart/bodyPart';
+import { configuration } from '../configuration';
+// @ts-ignore
+import bodyParts from './sampleBodyParts.json';
 import { IBodyPartsFile } from './interfaces/IBodyPartsFile';
 
 const bodyPart1 = {
@@ -77,9 +80,9 @@ describe('setUpConfiguration()', () => {
 describe('setUpConfiguration() with local JSON file', () => {
     beforeEach(() => {
         // eslint-disable-next-line @typescript-eslint/no-var-requires
-        const bodyParts = require('./src/bodyParts/sampleBodyParts.json') as IBodyPartsFile;
+        // const bodyParts = require('./src/bodyParts/sampleBodyParts.json') as IBodyPartsFile;
         new BodyPartIndex({
-            bodyPartData: bodyParts,
+            bodyPartData: bodyParts as IBodyPartsFile,
             localBodyPartMappings: [
                 {
                     localCode: {
